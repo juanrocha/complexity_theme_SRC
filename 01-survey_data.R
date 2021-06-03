@@ -6,7 +6,7 @@ dat <- googlesheets4::read_sheet(
 
 codebook <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1DCfvdeFEA_U3rU6rSaHjUm23UrtI8ysoDgPXRnl_4io/edit?usp=sharing")
 
-
+load("data/survey_data.RData")
 
 cbk <- codebook %>% 
     filter(!is.na(StartDate)) %>%  
@@ -31,9 +31,10 @@ extract_codes <- function(question) {
 extract_codes("Q19")
 
 ## qualitative column
-colm <- "Q14"
+colm <- "Q19"
 
 dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(q = colm) %>% 
     mutate(q = str_split(q, ","), id = row_number()) %>% 
     unnest(q) %>% 
@@ -50,16 +51,17 @@ ggsave(
 )
 
 ## quantitative column
-colm <- "Q18"
+colm <- "Q14"
 
 dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(q = colm) %>% 
     mutate(q = str_split(q, ","), id = row_number()) %>% 
     unnest(q) %>% 
-    mutate(q= str_remove_all(q, "[:alpha:]|[:blank:]"),
-           q = str_trim(q, "both"),
-           q = as.numeric(q), 
-           q = case_when(q == 2012 ~ 2021-2021, TRUE ~ q)) %>% 
+    # mutate(q= str_remove_all(q, "[:alpha:]|[:blank:]"),
+    #        q = str_trim(q, "both"),
+    #        q = as.numeric(q), 
+    #        q = case_when(q == 2012 ~ 2021-2021, TRUE ~ q)) %>% 
     ggplot(aes(q)) +
     geom_bar() + coord_flip() +
     labs(x = 'Years at SRC or Beijer', y = "Number of people") +
@@ -69,6 +71,7 @@ dat %>%
 cbk %>% filter(str_detect(short_names, "Q20")) %>% print(n=51)
 
 df_methods <- dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(starts_with("Q20")) %>% 
     pivot_longer(everything(), names_to = "short_names", values_to = "responses") %>% 
     left_join(
@@ -104,16 +107,19 @@ ggsave(
 cbk %>% filter(str_detect(short_names, "Q136#1")) %>% print(n=57)
 
 df1 <- dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(theory = "Q152#1_1_1", starts_with("Q136#1")) %>% 
     pivot_longer(2:last_col(), names_to = "short_names", values_to = "responses") %>% 
     left_join(cbk %>% filter(str_detect(short_names, "Q136#1"))) 
 
 df2 <- dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(theory = "Q152#2_1_1", starts_with("Q136#2")) %>% 
     pivot_longer(2:last_col(), names_to = "short_names", values_to = "responses") %>% 
     left_join(cbk %>% filter(str_detect(short_names, "Q136#2"))) 
 
 df3 <- dat %>% 
+    filter(Q5 == "Yes") %>% 
     select(theory = "Q152#3_1_1", starts_with("Q136#3")) %>% 
     pivot_longer(2:last_col(), names_to = "short_names", values_to = "responses") %>% 
     left_join(cbk %>% filter(str_detect(short_names, "Q136#3"))) 
@@ -150,3 +156,49 @@ df_theories %>%
 
 
 save(dat, codebook, file = "data/survey_data.RData")
+
+
+#### Networks ####
+library(network)
+df_net <- googlesheets4::read_sheet(
+    "https://docs.google.com/spreadsheets/d/1YerHWDrxmP-HEY3ump57RYCKVI6g-it-RYxSMbmrHzU/edit#gid=1532000679") %>% janitor::clean_names()
+
+df_src <- df_net %>% 
+    filter(!is.na(src_author)) %>% 
+    select(-method_category_combination, -method) %>% 
+    select(id = number, src_author, starts_with("method")) %>% 
+    pivot_longer(cols = starts_with("method_category"), names_to = "names", values_to = "method") %>% 
+    select(-names) %>% 
+    filter(method != "N/A", !is.na(method))
+
+mat <- df_src %>% 
+    select(-src_author) %>% 
+    unique() %>% 
+    mutate(link = 1) %>% 
+    pivot_wider(id_cols = id, names_from = method, values_from = link, values_fill = 0) %>% 
+    select(-id) %>% 
+    as.matrix()
+
+metmat <- t(mat) %*% mat # methods projection
+
+net <- metmat %>% 
+    as_tibble(., rownames = "from") %>% 
+    pivot_longer(2:last_col(), names_to = "to", values_to = "value") %>% 
+    filter(value > 0) %>% 
+    filter(from != to) %>% 
+    network(directed = FALSE, bipartite = FALSE, matrix.type = "edgelist", ignore.eval = FALSE)
+
+#quartz(width = 4, height = 4, pointsize = 6, dpi = 200)
+
+plot.network(
+    net,
+    label = network.vertex.names(net),
+    vertex.col = "orange",
+    edge.lwd = get.edge.attribute(net, "value")/2,
+    edge.col = "grey50",
+    label.cex = 0.5
+)
+
+GGally::ggnet(net)
+
+#quartz.save(file = "figures/net_methods.png",width = 4, height = 4, pointsize = 6, dpi = 200 )
