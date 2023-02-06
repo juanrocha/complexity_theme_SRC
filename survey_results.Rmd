@@ -1,0 +1,17 @@
+---
+title: "Survey results"
+author: "Juan Rocha"
+date: April 2022
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+library(tidyverse)
+load("data/survey_data.RData")
+```
+
+The survey ran between `r range(dat$StartDate |> lubridate::as_date()) |> lubridate::parse_date_time("y m d")`. `r nrow(dat)` people answered the survey, of which `r dat |> filter(Q4 == "Yes") |> nrow()` gave us consent to use the results internally at SRC. All results below include only the individuals who gave us their permission.
+
+

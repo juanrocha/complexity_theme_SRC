@@ -1,0 +1,13 @@
+---
+title: "Notes"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+Changes to make:
+
+- standardize names of methods (categories for plots) [x]
+- bacci as interviews
+- pull n people per method
+
