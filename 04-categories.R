@@ -1,18 +1,93 @@
 library(tidyverse)
 
 
-dat2 <- googlesheets4::read_sheet(
-    "https://docs.google.com/spreadsheets/d/1UniT8_uodegRIEvf8hLzivrETNQHvqWypNIbLSoD7nY/edit#gid=1532000679", sheet =1 ) |> janitor::clean_names()
+# dat2 <- googlesheets4::read_sheet(
+#     "https://docs.google.com/spreadsheets/d/1UniT8_uodegRIEvf8hLzivrETNQHvqWypNIbLSoD7nY/edit#gid=1532000679", sheet =1 ) |> janitor::clean_names()
+# 
+# 
+# dat2 |> 
+#     mutate(method_category = str_remove_all(method_category, "\\n")) |> 
+#     mutate(method_category = str_to_lower(method_category)) |> 
+#     mutate(method_category = str_split(method_category, pattern = ",|;|/")) |> 
+#     unnest(cols = method_category) |> 
+#     mutate(method_category = str_trim(method_category, "both")) |> 
+#     filter(!is.na(method_category), method_category != "??", method_category != '') 
+#     #pull(method_category) |> unique() # needs cleaning
+#     ggplot(aes(method_category)) +
+#     geom_bar() +
+#     coord_flip()
+    
+#### Methods and other categories from Mexican group####
+
+## Places
+df_place <- tribble(
+    ~category, ~name,
+    "latam_carib", "Argentina|Bolivia|Brazil|Brasil|Chile|Colombia|Costa Rica|Cuba|Dominican Republic|República Dominicana|Ecuador|El Salvador|Guatemala|Honduras|Mexico|México|Nicaragua|Paraguay|Panama|Peru|Perú|Uruguay|Venezuela|Latin America|América Latina|South America|Suramerica|America del Sur|America do Sul|Central America|America Central|Centroamerica|CentroAmérica|Mesoamerica|The Bahamas|Barbados|Belize|Republic Dominican|Guyana|Haiti|Jamaica|Caribbean States|Antigua and Barbuda|Dominica|Grenada|Saint Kitts and Nevis|Saint Lucia|Saint Vicent|Sint Maarten|Suriname|Trinidad and Tobago|Caribbean countries|The Caribbean",
+    "ss-afr", "Angola|Benin|Botswana|Burkina Faso|Burundi|Cameroon|Cape Verde|Central African Rep.|Chad|Comoros|Congo, Dem. Rep.|Congo, Repub. of the|Cote d'Ivoire|Djibouti|Equatorial Guinea|Eritrea|Ethiopia|Gabon|Gambia, The|Ghana|Guinea|Guinea-Bissau|Kenya|Lesotho|Liberia|Madagascar|Malawi|Mali|Mauritania|Mauritius|Mayotte|Mozambique|Namibia|Niger|Nigeria	|Rwanda|Saint Helena|Sao Tome & Principe|Senegal|Seychelles|Sierra Leone|Somalia|South Africa|Sudan|Swaziland|Tanzania|Togo|Uganda|Zambia|Zimbabwe|Africa",
+    "ocea", "American Samoa|Australia|Cook Islands|Fiji|French Polynesia|Guam|Kiribati|Marshall Islands|Micronesia|Nauru|New Caledonia|New Zealand|N. Mariana Islands|Palau|Papua New Guinea|Samoa|Solomon Islands|Tonga|Tuvalu|Vanuatu|Wallis and Futuna",
+    "n-amer", "Bermuda|Canada|Greenland|St Pierre & Miquelon|United States",
+    "n-afri", "Algeria|Egypt|Libya|Morocco|Tunisia|Western Sahara",
+    "n-est","Bahrain|Cyprus|Gaza Strip|Iraq|Israel|Jordan|Kuwait|Lebanon|Oman|Qatar|Saudi Arabia|Syria|Turkey|United Arab Emirates|West Bank|Yemen",
+    "comm-wlth", "Armenia|Azerbaijan|Belarus|Georgia|Kazakhstan|Kyrgyzstan|Moldova|Russia|Tajikistan|Turkmenistan|Ukraine|Uzbekistan",
+    "baltic", "Estonia|Latvia|Lithuania", 
+    "asia-ne", "Afghanistan|Bangladesh|Bhutan|Brunei|Burma|Cambodia|China|East Timor|Hong Kong|India|Indonesia|Iran|Japan|Korea, North|Korea, South|Laos|Macau|Malaysia|Maldives|Mongolia|Nepal|Pakistan|Philippines|Singapore|Sri Lanka|Taiwan|Thailand|Vietnam|Asia",
+    "w-europe", "Andorra|Austria|Belgium|Denmark|Faroe Islands|Finland|France|Germany|Gibraltar|Greece|Guernsey|Iceland|Ireland|Isle of Man|Italy|Jersey|Liechtenstein|Luxembourg|Malta|Monaco|Netherlands|Norway|Portugal|San Marino|Spain|Sweden|Switzerland|United Kingdom|Europe",
+    "e-europe", "Albania|Bosnia & Herzegovina|Bulgaria|Croatia|Czech Republic|Hungary|Macedonia|Poland|Romania|Serbia|Slovakia|Slovenia|Eurasia"
+    
+)
+
+    
+## Urban
+df_urban <- tribble(
+    ~category, ~name,
+    "urban", "Metropolitan|metropolitan| urban areas|conurbation|residential area|city district| urban commun*| urban conglomeration| urban",
+    "rural", "Rural area|rural people|farm|farms|farmland|farmlands|rural inhabitants|village|farm village| rural",
+    "periurban", "peri-urban |Peri-urban areas |periurban area |peri-urban areas |urban-rural interface |urban-rural interfaces |rural–urban fringe |hinterland|rural-urban gradient |urban hinterland|peripheral area|peripheral zone|edge urban"
+)    
+
+df_ses <- tribble(
+    ~category, ~name,
+    "forest", "Forest|forest|Woodland|woodland |Jungle|jungle |Timberland |timberland|rainforest|forestry|silviculture",
+    "fresh_water", "Watershed|basins|Water resource|river|springs|flow|stream|lakes",
+    "wetland", "Wetland | wetland",
+    "marine", "Coral reef |Coral reefs | coral reef | coral reefs| Coastal | coastal | beach | marine| marine ecosystem | fishery| fish| mangrove|ocean",
+    "terrestrial", "Pasture | pasture | pastoral| rangeland | pasture grass | grassland| grasslands| Crop land| crops| arid| mountain| dryland"
+)
+
+ses_frmwks <- tribble(
+    ~category, ~name,
+    "ses_resilience", "social-ecological system resilience|social-ecological system resilience|social ecological resilience|socio-ecological resilience|socio-ecological resilience|social-ecological resilience|resilience approach|system resilience dynamics model| ecosystem resilience",
+    "ses_ostrom", "ses framework|social ecological systems framework| socio-ecological systems framework|Ostrom",
+    "chans", "Coupled Human and Natural System | Coupled Human-Natural System | coupled human and natural systems| chans",
+    "adaptive_capacity", "adaptive capacity",
+    "adaptive_cycle", "adaptive cycle",
+    "panarchy", "Panarchy|panarchy perspective",
+    "sust_liv", "sustainable livelihood",
+    "transformability","transformability|transformational capacity",
+    "ewfd", "european water framework directive|water framework directive",
+    "other", "theoretical framework|assessment framework|spatial resilience|bottom-up approach|new approaches |systemic approach|regulatory framework|top-down approach|community-based natural resource management|evaluation framework|partnership approach|regulatory approach|evaluation approach|monitoring approach|qualitative and quantitative approaches|scenario approach|systemic thinking|analysis frameworks|hierarchical approach|ipbes|systems integration|assessment of water scarcity risk|system viability framework|united nations framework convention on climate change|administrative framework|functional approach|methodological frameworks|regional energy resilience assessment|vsd assessment framework|differential approach|drivers pressure state impact responses framework|ecosystem approach to fisheries|incremental approach|innovative approaches|integrated model of risk assessment|quantitative frameworks|research frameworks|saf framework|social-ecological patches|stratified approach|trans-disciplinary approaches|community capitals framework|framework of vulnerability analysis|marine strategy framework directives|participatory integrated assessment approach|pro-active approach|risk based approaches|systemic frameworks|Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services"
+    
+)
+
+df_methods <- tribble(
+    ~category, ~name,
+    #conceptual, simulation or otherwise
+    "modeling", "adaptive cycle heuristic|agent-based decision model|agent-based landscape model|agent-based model|agent-based modeling|agent-based modelling|agent-based models|agent-based simulation models|ardi method|autonomous agents|bayesian modelling|behaviour of human agents|causal model|causal model|causal relationships|cause-effect relationships|cell automaton model|cell automaton model|cellular automata|cellular automaton|chans modelling|cognitive systems|community-based complex models|complex adaptive systems|complex interaction|complex modeling techniques|complex modeling techniques|comprehensive integrations|comprehensive model|computational approach|computational methods|computational modelling|computer model|computer simulation|conceptual approaches|conceptual framework|conceptual model|conceptual modeling|conceptual models of adaptive cycles|coupled modeling|dpsir|dynamic adaptations|dynamic approaches|dynamic assessment|dynamic interaction|dynamic modeling|dynamic modeling|dynamic modelling|dynamic modelling|dynamic models|dynamic models|dynamic vegetation model|dynamic vegetation model|dynamical systems|ecological approach|ecological modeling|ecological modelling|ecosystem approach|ecosystem services|ecosystem-based management|general circulation model|holistic approach|holistic development|holistic perspectives|individual-based model|integral components|integral dynamic model|integral model|integrated analysis|integrated approach|integrated assessment|integrated assessment model|integrated assessment models|integrated assessment tools|integrated building-urban evaluation|integrated catchment managements|integrated coastal management|integrated conceptual framework|integrated crop livestock system analysis|integrated decision makings|integrated evaluation|integrated frameworks|integrated human-biophysical model|integrated management|integrated management frameworks|integrated marine protected area socioeconomic monitoring and assessment framework|integrated modeling|integrated modelling|integrated modelling|integrated pest management|integrated research|integrated water management|integrated water resources management|integrating research|integration process|integrative managements|interdisciplinary analysis|interdisciplinary approach|interdisciplinary knowledge integration|loop analysis|loop modeling|multi agent system models|multi-agent based modeling|multiagent systems model|scenario analysis|scenario studies|scenario testing|sensitivity analysis|simulation model|simulation modelling|simulation modelling|simulation models|simulation models|simulation platform|spatial agent-based models|spatiotemporal simulation|state-and-transition modeling|structural equation modeling|structural equation models|system dynamic modelling|system dynamics model|system modeling|system modeling approach|system modelling|systems analysis",
+    "statistics", "analysis of variance|autocorrelation|bayes theorem|bayesian analysis|bayesian learning|bayesian modelling|canonical analysis|cohort analysis|composite index|composite index approach|correlation|correlation analysis|diversity index|ecological indicators|estimation method|forecasting|fuzzy logic|fuzzy mathematics|generalized additive model|generalized linear model|geo-statistical|index method|indicator frameworks|indicator-based analyses|indicator-based analysis|indicator-based approach|indicator-based management|indicators|input-output analysis|interaction matrices|markov chain|markov chains|markov decision processes|markov processes|monte carlo methods|multivariate statistical analysis|multivariate statistics|probabilistic framework|statistical analysis|statistical application|statistical methods|statistical model|statistical modeling|statistical models|statistical tests|statistics and numerical data|stochastic analysis|stochastic model|stochastic models|stochastic processes|stochastic systems|sustainability appraisal|sustainability indicators|system indicators|traffic light method|two-stage estimation|uncertainty analysis|uncertainty assessment|variance analysis",
+    "spatial_planning", "3d geospatial visualization|backcasting|cartography|causal maps|coastal and ocean planning|cognitive map|cognitive mapping|cognitive maps|community mapping|conformal mapping|conservation planning|conservation prioritization|ecological mapping|ecological monitoring|ecosystem management|ecosystem service mapping|fuzzy cognitive map|fuzzy cognitive mapping|fuzzy-logic cognitive maps|geographic information systems|geographic mapping|geographical spatial analysis|geospatial analysis|geo-spatial data|geostatistical analysis|geo-statistical analysis|geostatistics|gis participatory mapping|hotspots mapping|integrated planning|land use and land cover change|land use change modeling|land use land cover change|landscape design and planning|landscape modeling|landscape morphology|landscape planning|mapping method|marine spatial planning|participatory mapping|participatory planning|planning method|quantitative mapping|remote sensing|spatial analysis|spatial and temporal resolutions|spatial assessment|spatial autocorrelations|spatial autoregressive modeling|spatial correlations|spatial data|spatial data management|spatial differentiation|spatial externalities|spatial gradients|spatial heterogeneity|spatial integrations|spatial interaction|spatial interaction analysis|spatial mapping|spatial modeling|spatial modelling|spatial models|spatial morphologies|spatial morphology|spatial narratives|spatial patterns|spatial planning|spatial prioritization|spatial regression|spatial relationships|spatial simulation|spatial systems|spatial variables measurement|spatial variation|spatially distributed models|spatially explicit|spatially explicit modeling|spatially explicit models|spatially-distributed system|spatially-explicit analyses|spatial-temporal changes|spatial-temporal correlation|spatial-temporal evolution|spatiotemporal analysis|spatio-temporal analysis|spatiotemporal distributions|spatio-temporal dynamics|spatiotemporal evolution|spatio-temporal interpolations|spatio-temporal scale|spatio-temporal trajectories|strategic approach|strategic planning|strategic spatial planning|strategic vision|systematic conservation planning|telecoupling|telecoupling framework|watershed planning|whole landscape planning",
+    "qual_part", "action-research|citizen science|coding|collaborative approach|collaborative management|collaborative research|collective action|collective behavior|community participation|community-based participatory research|comparative analysis|comparative case studies|comparative case study analysis|comparative studies|comparative study|consensus analysis|cultural consensus analysis|cultural history|democratic participation|design method|discourse analysis|document analysis|expert interviews|focus group interviews|focus group research|focus groups|group model building|historical analysis|historical dynamics|historical ecology|historical geography|historical perspective|historical timeline analysis|household interviews|in-depth interviews|interview|key informant interviews|literature review|local participation|meta analysis|meta-analysis|multi-scale historical reconstruction|narrative analysis|narrative walks|open-ended interviews|participant observation|participatory action research|participatory and system-based approaches|participatory approach|participatory evaluation|participatory gis|participatory integrated assessments|participatory m&e|participatory management|participatory method|participatory modeling|participatory modeling framework|participatory modelling|participatory monitoring|participatory multicriteria analysis|participatory process|participatory research|participatory rural appraisal|participatory scenario analysis|participatory scenario planning|participatory video|participatory workshops|qualitative analysis|qualitative approach|qualitative interviews|qualitative meta-analysis|qualitative research|semi-structured interviews|social participation|stakeholder participation|structural analysis|structural knowledge|structural methods|structure analysis|text analysis|text mining|traditional knowledge|videography|visioning|visual analysis|visual communication|visualization|visualization method",
+    "vulnerability", "ecological risk assessment|emergy analysis|environmental assessment|environmental flow assessment|integrated vulnerability|livelihood vulnerability index|risk assessment|social vulnerability assessment|vulnerability analysis|vulnerability mapping",
+    "institutional analysis", "community-based|community-based complex models|community-based conservation|community-based forest managements|governance approach|governance structures|institutional analysis|institutional change|institutional design|institutional diversity|institutional framework|institutional interplay|management strategies|management strategy evaluations|management systems|multi-level governance|network governances|new institutional economics|participatory governance|polycentric governance|water governance",
+    "decision-process analysis", "adaptive management|analytic hierarchy process|analytic method|analytical framework|analytical hierarchy process|analytical method|analytical process|assessment approaches|assessment method|benefit-cost analysis|cost analysis|cost benefit analysis|cost effectiveness analysis|cost-benefit analysis|data-driven methods|decision analysis|decision making|decision support models|decision support system|decision-making frameworks|decision-making structure|empirical analysis|policy analysis|policy approach|policy evaluation|viability analysis",
+    "math_model", "analytical estimations|attitude models|binary logistic regression analysis|bioeconomic modelling|biophysical modelling|change-point analysis|climate change scenarios|climate modeling|climate models|contingent valuation|differential equation model|earth system model|ecological forecasting|ecological niche modeling|ecological valuation|ecological-economic modeling|econometrics|economic assessment|economic dimensions|economic model|economic modelling|economic valuation|economical scenarios|ecosystem modeling|environmental kuznets curve|environmental model|environmental modeling|environmental modelling|geographically weighted regression|groundwater modeling|groundwater modelling|hedonic model|hybrid model|hydrologic modelling|hydrological modeling|linear regression|logistic regression|machine learning|machine learning approaches|machine learning methods|mathematical analysis|mathematical computing|mathematical concepts|mathematical model|mathematical models|mathematical parameters|mathematical phenomena|mathematical representations|mathematical theory|multi criteria analysis|multi-criteria|multicriteria analysis|multicriteria approach|multi-criteria assessment|multicriteria evaluation|multi-criteria evaluation|multi-dimensional analysis|multinomial logistic regression|multiple criteria analysis|multiple criteria decision analysis|multiple logistic regression|multiple regression model|numerical method|numerical model|numerical models|optimization|payment for environmental services|payments for ecosystem services|payments for environmental services|polynomial regression models|predictive models|process model|process-based ecosystem model|quantitative analysis|quantitative approach|quantitative ethnoecological approach|quantitative method|quantitative study|questionnaire surveys|regression analysis|regression techniques|spatial autoregressive modeling|structural equation models|swat model|valuation of ecosystem services",
+    "networks", "artificial neural network|artificial neural networks|bayesian belief network|bayesian network|bayesian networks|canonical correspondence analysis|cluster analysis|clustering|complex networks|co-occurrence analysis|co-occurrence relationships|correspondence analysis|diagramming methods|discriminant analysis|distributed parameter networks|ecological network analysis|factor analysis|factorial analysis|graph theory|intelligent networks|k-medoids clustering|knowledge networks|mental model|mental models|metabolic network|methods of network analysis|multiplex networks|network analysis|network flow analysis|network function virtualization|network governances|network measures|network meta-analysis|network modelling|network models|network topology analysis|principal component analysis|probabilistic clustering|research networks|semantic network|social network|social network analysis|social networking|spatial clustering|spatial-network analysis"
+)
+
+df_knofocus <- tribble(
+    ~category, ~name,
+    "multidisciplinary", "Multidisciplinarity|multiple disciplines|multi-disciplinary approach|multi-disciplinary research|multi-disciplinary research|multi-disciplinary systems|multi-disciplinary teams",
+    "interdisciplinary", "interdisciplinarity|interdisciplinarity|interdisciplinary| interdisciplinary approach|interdisciplinary collaborations|interdisciplinary communication|interdisciplinary modeling|interdisciplinary research| interdisciplinary research|interdisciplinary analysis|interdisciplinary skills|interdisciplinary studies|inter-disciplinary studies|interdisciplinary systems|interdisciplinary teamwork",
+    "transdisciplinary", "transdisciplinarity|transdisciplinary research|transdisciplinary science"
+)
 
 
-dat2 |> 
-    mutate(method_category = str_remove_all(method_category, "\\n")) |> 
-    mutate(method_category = str_to_lower(method_category)) |> 
-    mutate(method_category = str_split(method_category, pattern = ",|;|/")) |> 
-    unnest(cols = method_category) |> 
-    mutate(method_category = str_trim(method_category, "both")) |> 
-    filter(!is.na(method_category), method_category != "??", method_category != '') 
-    #pull(method_category) |> unique() # needs cleaning
-    ggplot(aes(method_category)) +
-    geom_bar() +
-    coord_flip()
