@@ -1,21 +1,21 @@
 library(tidyverse)
 
 
-dat2 <- googlesheets4::read_sheet(
-    "https://docs.google.com/spreadsheets/d/1UniT8_uodegRIEvf8hLzivrETNQHvqWypNIbLSoD7nY/edit#gid=1532000679", sheet =1 ) |> janitor::clean_names()
-
-
-dat2 |> 
-    mutate(method_category = str_remove_all(method_category, "\\n")) |> 
-    mutate(method_category = str_to_lower(method_category)) |> 
-    mutate(method_category = str_split(method_category, pattern = ",|;|/")) |> 
-    unnest(cols = method_category) |> 
-    mutate(method_category = str_trim(method_category, "both")) |> 
-    filter(!is.na(method_category), method_category != "??", method_category != '') 
-    #pull(method_category) |> unique() # needs cleaning
-    ggplot(aes(method_category)) +
-    geom_bar() +
-    coord_flip()
+# dat2 <- googlesheets4::read_sheet(
+#     "https://docs.google.com/spreadsheets/d/1UniT8_uodegRIEvf8hLzivrETNQHvqWypNIbLSoD7nY/edit#gid=1532000679", sheet =1 ) |> janitor::clean_names()
+# 
+# 
+# dat2 |> 
+#     mutate(method_category = str_remove_all(method_category, "\\n")) |> 
+#     mutate(method_category = str_to_lower(method_category)) |> 
+#     mutate(method_category = str_split(method_category, pattern = ",|;|/")) |> 
+#     unnest(cols = method_category) |> 
+#     mutate(method_category = str_trim(method_category, "both")) |> 
+#     filter(!is.na(method_category), method_category != "??", method_category != '') 
+#     #pull(method_category) |> unique() # needs cleaning
+#     ggplot(aes(method_category)) +
+#     geom_bar() +
+#     coord_flip()
     
 #### Methods and other categories from Mexican group####
 
@@ -60,9 +60,9 @@ ses_frmwks <- tribble(
     "ses_ostrom", "ses framework|social ecological systems framework| socio-ecological systems framework|Ostrom",
     "chans", "Coupled Human and Natural System | Coupled Human-Natural System | coupled human and natural systems| chans",
     "adaptive_capacity", "adaptive capacity",
-    "adaptive cycle", "adaptive cycle",
+    "adaptive_cycle", "adaptive cycle",
     "panarchy", "Panarchy|panarchy perspective",
-    "sust liv", "sustainable livelihood",
+    "sust_liv", "sustainable livelihood",
     "transformability","transformability|transformational capacity",
     "ewfd", "european water framework directive|water framework directive",
     "other", "theoretical framework|assessment framework|spatial resilience|bottom-up approach|new approaches |systemic approach|regulatory framework|top-down approach|community-based natural resource management|evaluation framework|partnership approach|regulatory approach|evaluation approach|monitoring approach|qualitative and quantitative approaches|scenario approach|systemic thinking|analysis frameworks|hierarchical approach|ipbes|systems integration|assessment of water scarcity risk|system viability framework|united nations framework convention on climate change|administrative framework|functional approach|methodological frameworks|regional energy resilience assessment|vsd assessment framework|differential approach|drivers pressure state impact responses framework|ecosystem approach to fisheries|incremental approach|innovative approaches|integrated model of risk assessment|quantitative frameworks|research frameworks|saf framework|social-ecological patches|stratified approach|trans-disciplinary approaches|community capitals framework|framework of vulnerability analysis|marine strategy framework directives|participatory integrated assessment approach|pro-active approach|risk based approaches|systemic frameworks|Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services"
@@ -89,5 +89,4 @@ df_knofocus <- tribble(
     "interdisciplinary", "interdisciplinarity|interdisciplinarity|interdisciplinary| interdisciplinary approach|interdisciplinary collaborations|interdisciplinary communication|interdisciplinary modeling|interdisciplinary research| interdisciplinary research|interdisciplinary analysis|interdisciplinary skills|interdisciplinary studies|inter-disciplinary studies|interdisciplinary systems|interdisciplinary teamwork",
     "transdisciplinary", "transdisciplinarity|transdisciplinary research|transdisciplinary science"
 )
-
 
