@@ -1,0 +1,78 @@
+---
+title: "Extended outline"
+date: "2024-08-15"
+output:
+  pdf_document:
+    dev: pdf
+    keep_tex: yes
+    toc: no
+    latex_engine: xelatex
+csl: /Users/juanrocha/Documents/styles/annual-reviews.csl
+bibliography: refs.bib
+citecolor: blue
+documentclass: article
+---
+
+## ***Title:*** Regime shifts research meets transformations research - advancing critical frontiers for safe and just futures
+
+### ***Key insights** (to be updated):*
+
+-   Clarify the difference and overlaps between transformations and regime shifts theories and the use of concepts such as tipping points
+-   Highlighting frontiers of research that need both approaches
+-   Navigating the space of positive and negative tipping points
+
+### Literature cited
+
+We will review literature from the social and natural sciences regarding regime shifts and transformations research.
+These two fields are typically dealt with in natural resource management, environmental economics, ecology, sustainability science, rural studies, political ecology, among others.
+Examples of seminal work on these topics include Holling [-@holling1973resilience], Folke et al [-@folke2004], Olsson et al [-@olsson2006shooting], or books such as Navigating Social-Ecological systems [@berkes2008navigating], Linking social ecological systems [@berkes2000linking], or Critical transitions in Nature and Society [@scheffer2009critical].
+Below you find the outline of our review with sample references of the work we are reviewing.
+
+## Outline
+
+-   **Problem setting:** There are two strands of literature within the field of sustainability science and natural resource management that share a common origins [@holling1973resilience; @gunderson2002panarchy; @folke2004; @folke2010resilience; @folke2005adaptive] but have been diverging in the last couple of decades: regime shifts and transformations research.
+    In diverging, there are risks for oversimplification and misuse of concepts, jargonification, using multiple words to mean the same thing, but importantly also the lack of cross-fertilization between the two different scholarships.
+
+-   **Definitions:** what are regime shifts, what are transformations ?[
+    1000w, 500w each]
+
+    -   Regime shifts key characteristics: nonlinear change characterised by tipping points.
+        Important features include hysteresis, feedback mechanisms, with potential impacts on ecosystem services and human wellbeing [@lewontin1969meaning; @holling1973resilience; @scheffer2001; @beisner2003alternative; @scheffer2003].
+
+    -   Transformations key characteristics: nonlinear changes characterised by shifting basins of attractions towards more desirable states.
+        Important features include windows of opportunity, agency and power dynamics [@gunderson2002panarchy; @walker2004resilience; @olsson2006shooting; @folke2010resilience; @herrfahrdt-pähle2020; @geels2018socio; @olsson2024transformations].
+
+-   **History of both streams of research** (nice graphics, iconic papers) [1000w]
+
+    -   Timelines 
+
+        -   Regime shifts: [@lewontin1969meaning; @holling1973resilience; @scheffer2001; @beisner2003alternative; @scheffer2003; @carpenter2005; @andersen2009; @carpenter2009; @sole2011phase; @lade2015; @rocha2018; @martin2020] 
+
+        -   Transformations: [@gunderson2002panarchy; @walker2004resilience; @westley2011tipping; @olsson2006shooting; @folke2010resilience; @moore2012loop; @moore2014studying; @avelino2017power; @geels2018socio; @mcgowan2023recognizing; @herrfahrdt-pähle2020; @moore2020imagination; @olsson2024transformations] 
+
+    -   Initial focus of both fields and and how they changed over time, including highlighting phases of theory vs. empirical focus of both fields and applied methods.
+        This section will also include work that put forward skeptic points of view on the validity of regime shifts or transformation theories (e.g. [@hillebrand2020; @mcgowan2023recognizing] ) 
+
+-   **Commonalities and differences** (e.g. power in transformations research vs hysteresis in regime shifts research) [500w]
+
+    -   What questions do they ask? What methods do they use? What disciplinary approaches are involved (targeted)? What scale? What are the main findings?
+
+-   **Current research challenges** [1500w, 500w each]
+
+    -   Multidimensionality
+
+    -   Observability and detection
+
+    -   Management: ethical stakes
+
+-   **Navigating the space of positive and negative tipping points** [1000w, 500w each]: 
+
+    -   Criticism of current (mis)uses of positive and negative tipping points for their social desirability (e.g. [@lenton2022operationalising; @lenton2023global])
+
+    -   Distribution of costs, benefits, and power to make a difference
+
+    -   Risk of reinforcing colonial practices [@pereira2024equity]
+
+-   **Conclusions**: frontiers of research
+
+### Example of literature reviewed

@@ -7,3 +7,11 @@
 *.png
 *.pdf
 *.Rproj
+.DS_Store
+.gitignore
+.Rapp.history
+*.pages
+*.tex
+*.bib
+*.RData
+*.Rda
