@@ -1,0 +1,149 @@
+---
+title: "Regime shifts and transformations: advancing critical frontiers for safe and just futures"
+author: |
+    | \small Juan C. Rocha
+    | \small \texttt{\href{mailto:juan.rocha@su.se}{\nolinkurl{juan.rocha@su.se}}}
+output:
+  pdf_document:
+    dev: pdf
+    keep_tex: yes
+    toc: no
+    latex_engine: xelatex
+    #template: "LaTeX-Style3/template-for-Authors-3.tex"
+  rtf_document:
+    toc: no
+  word_document:
+csl: /Users/juanrocha/Documents/styles/annual-reviews.csl
+bibliography: refs.bib
+documentclass: article
+# font: Arial
+# fontsize: 10pt
+# linkcolor: blue
+# urlcolor: blue
+# header-includes:
+# - \usepackage{dcolumn, rotating, longtable, lineno, float, array, tabularx, inputenc}
+# - \setmainfont{Arial}
+# - \renewcommand{\abstractname}{}
+# - \graphicspath{{figures/}}
+# - \usepackage[margin=2.5cm]{geometry}
+# - \linenumbers
+# - \usepackage{setspace}
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(here)
+
+## word counts
+## Abstract 150
+## Intro 697
+## Method 957
+## Results 621
+## Discussion 1434
+## Conclusion 267
+## Total main 3976 + 150 abstract
+## 
+## Targets: Annual Reviews or Environment and Resources
+## 9300w, 2 figs, 150 refs (27 pages in published volume)
+## required sections:
+## - summary points (max 8)
+## - Future issues (max 8)
+## - Terms and definitions: max 20, definitions of 20 words each
+
+
+# Outline
+# 
+# Problem setting [1000w]
+# 
+# Definitions [1000w, 500w each]
+# 
+# History of the concepts [1000w]
+# 
+# Commonalities and differences [500w]
+# 
+# Current research challenges [1500w]
+# 
+# Multidimensionality
+# 
+# Observability and detection
+# 
+# Management: ethical stakes
+# 
+# Navigating the space of positive and negative tipping points [1000w]
+# 
+# Conclusions [500w]
+# 
+# Key insights (to be updated):
+# 
+# Clarify the difference and overlaps between transformations and regime shifts theories and the use of concepts such as tipping points
+# 
+# Highlighting frontiers of research that need both approaches
+# 
+# Navigating the space of positive and negative tipping points
+# 
+# \newpage
+```
+
+## Introduction
+
+Sustainability scientists are concerned with nonlinear changes.
+Depending on the research problem, the focus could be on avoiding undesirable changes, or promoting desirable ones.
+But regardless of direction or desirability, notions of stability and resilience are common ground.
+Examples of nonlinear changes include the adoption of new technologies or regulatory frameworks for e.g. the energy transition, the banning of damaging substances for human health or the environment, such as chlorofluorocarbons (CFC) and their impacts on the ozone layer, or the collapse of fish stocks.
+
+There is two strands of sustainability science literature geared to deal with nonlinear changes that share a common origin [@holling1973resilience] but have been diverging in the last couple of decades: regime shifts [@folke2004] and transformations [@olsson2006shooting].
+Regime shifts are large, abrupt and persistent changes in the function and structure of social-ecological systems [@biggs2018].
+Transformations are about shifting development into new pathways, emergent and often unknown development trajectories [@folke2016].
+We expand on definitions, similarities and differences of these two streams of work on the next section.
+For now, we want to focus on why this review is timely and what we aim to bring to the larger scientific discussion.
+
+Our review is motivated by the apparent separation of the two streams of work given that both come from the same conceptual framework [@holling1973resilience] but are applied in different ways by different scholarly audiences.
+This could result in dimensions that are central on one framework becoming oversimplified in the other.
+For example, agency —the ability of actors to influence each other and the environment— is central within transformations framing, but less prominent within regime shifts studies.
+Conversely, the role of feedbacks is central in explaining regime shifts, but not always assessed in transformations research.
+
+This lack of dialogue can lead to misuse of terminology, oversimplifciation, jargonification, or simply re-inventing the wheel.
+For example, the concept of positive tipping points emphasize desirable transitions such as the adoption of electric vehicles [@lenton2025; @lenton2023global], but omit to analyze which societal groups will benefit or suffer from this transition and what it does imply for social dimensions of sustainability.
+Such issues related to justice and power have been studied for three decades in transformations research [@pereira2024equity] and could have highlighted the societal risks entailed in energy transitions.
+
+Sustainability science problems often bring questions of desired for whom, whose voices are heard in decision making, or dimensions of justice with e.g. future generations.
+Research in both the transformations and regime shifts strains have already contributed important milestones and tools to deal with such questions.
+However, these communities ignoring each other risks missing opportunities or the lack of cross-fertilization between the fields.
+In other words, it reduces the probability that we can successfully solve some of the core problems of sustainability science, which by definition, require understanding social and biophysical dynamics simultaneously.
+
+Sustainability science suffers from a proliferation of conceptual frameworks that grows faster than the capacity of scientist to test their validity or adequacy to explain real world problems.
+It is not alone, similar scholarly dynamics have been reported in sociology, ecology or physics [@clark2020; @watts2014; @marquet2014].
+A diversity of frameworks is an asset when a sustainability scientist treat them as tools to solve research problems.
+But it becomes problematic when similar ideas are re-framed over and over under different semantics, yet none of them advance from framework to scientific theory, that is a set of causal statements that produce refutable expectations.
+
+For example, the idea that social and ecological dynamics are intertwined, inseparable or entangled is at least three decades old [@berkes2000linking; @berkes2008navigating; @folke1996; @folke1991; @günther1993; @levin1999fragile], if not older [@renn2020evolution].
+In fact, the distinction between the natural and social does not exist in many indigenous cosmologies.
+Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012], coupled human environmental systems (CHENS) [@liu2007]] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
+More matured frameworks such as the SES have hundreds of case studies coded supporting the internal and external validity of the framework, and suggesting under which conditions an SES is likely to succeed in sustaining e.g. managing common pool resources [@ostrom2007, e.g. [Library on Governance of Social-Ecological Systems](https://seslibrary.asu.edu)].
+Other frameworks lack such rich empirical evidence, although some efforts are on their way in e.g. modeling transformations combining case studies and relational approaches [@schlüter2025].
+
+As we will review, some of the criticisms of regime shifts and transformations are lack of comparative case studies that shed light under which conditions these frameworks have explanatory power, or under which conditions are they likely to fail.
+An additional risk of multiple untested frameworks is the use of slightly different wording to mean the same thing (jargonification), for example positive tipping points and transformations.
+Here we will review and clarify the nuance on meanings to avoid falling into the jargon trap, or at least make the content more accessible from a pedagogical point of view.
+
+This review aims to outline research frontiers within sustainability science by looking closely to the transformations and regime shifts literature.
+We first dive on the definitions and history of these concepts, trying to disentangle what are their common grounds and differences.
+We then outline current research challenges and areas where we believe the two strands of work could benefit from working together.
+Last, we conclude with a short agenda for future research.
+
+## History and definitions
+
+While we focus on the phenomena of regime shifts and transformations, the central character of the story is actually the object of study to which these phenomena can occur: social-ecological systems.
+SES + Resilience + Adaptive and transformative capacities.
+
+### Regime shifts
+
+### Transformations
+
+### Similarities
+
+### Differences
+
+## Research challenges
+
+## Conclusions: future research
