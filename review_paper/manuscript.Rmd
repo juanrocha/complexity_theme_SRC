@@ -1,33 +1,29 @@
 ---
-title: "Regime shifts and transformations: advancing critical frontiers for safe and just futures"
+title: "Regime shifts and transformations: "
+subtitle: "Advancing critical frontiers for safe and just futures"
 author: |
-    | \small Juan C. Rocha
-    | \small \texttt{\href{mailto:juan.rocha@su.se}{\nolinkurl{juan.rocha@su.se}}}
+    | Juan C. Rocha et al.$^1$ 
+    | \affil{$^1$Stockholm Resilience Centre, Stockholm University, Stockholm, Sweden 10691; email: \texttt{\href{mailto:juan.rocha@su.se}{\nolinkurl{juan.rocha@su.se}}}}
+
 output:
   pdf_document:
-    dev: pdf
     keep_tex: yes
-    toc: no
+    keep_md: yes
     latex_engine: xelatex
-    #template: "LaTeX-Style3/template-for-Authors-3.tex"
-  rtf_document:
-    toc: no
-  word_document:
+    #template: template.tex
+    includes:
+      in_header: header.tex
+
 csl: /Users/juanrocha/Documents/styles/annual-reviews.csl
 bibliography: refs.bib
-documentclass: article
-# font: Arial
-# fontsize: 10pt
-# linkcolor: blue
-# urlcolor: blue
-# header-includes:
-# - \usepackage{dcolumn, rotating, longtable, lineno, float, array, tabularx, inputenc}
-# - \setmainfont{Arial}
-# - \renewcommand{\abstractname}{}
-# - \graphicspath{{figures/}}
-# - \usepackage[margin=2.5cm]{geometry}
-# - \linenumbers
-# - \usepackage{setspace}
+documentclass: ar-1col-S2O
+header-includes:
+- \markboth{Rocha et al.}{Regime shifts and transformations} 
+
+# abstract: | 
+#    | Current research problems in sustainability science require thinking on nonlinear changes with central questions such as how to avoid them, promote them, or predict them. Regime shifts and transformations literature addresss some of these qeustions, yet there is little cross-fertilization between these two streams of research. Here we review them, propose avenues from future reseach and how together they can be a powerful tool to achieve safe and just futures
+
+# keywords: "resilience, sustainability, transformations, adaptative capacity, regime shifts, adaptive management"
 ---
 
 ```{r setup, include=FALSE}
@@ -82,9 +78,28 @@ library(here)
 # Navigating the space of positive and negative tipping points
 # 
 # \newpage
+# 
+
 ```
 
-## Introduction
+\begin{abstract}
+Current research problems in sustainability science require thinking on
+nonlinear changes with central questions such as how to avoid them,
+promote them, or predict them. Regime shifts and transformations
+literature addresss some of these qeustions, yet there is little
+cross-fertilization between these two streams of research. Here we
+review them, propose avenues from future reseach and how together they
+can be a powerful tool to achieve safe and just futures
+\end{abstract}
+\begin{keywords}
+resilience, sustainability, transformations, adaptative capacity, regime shifts, adaptive management
+\end{keywords}
+
+\maketitle
+
+\tableofcontents
+
+\section{INTRODUCTION}
 
 Sustainability scientists are concerned with nonlinear changes.
 Depending on the research problem, the focus could be on avoiding undesirable changes, or promoting desirable ones.
@@ -131,19 +146,117 @@ We first dive on the definitions and history of these concepts, trying to disent
 We then outline current research challenges and areas where we believe the two strands of work could benefit from working together.
 Last, we conclude with a short agenda for future research.
 
-## History and definitions
+# HISTORY AND DEFINITIONS
 
-While we focus on the phenomena of regime shifts and transformations, the central character of the story is actually the object of study to which these phenomena can occur: social-ecological systems.
-SES + Resilience + Adaptive and transformative capacities.
+While we focus on the phenomena of regime shifts and transformations, the central character of the story is actually the object of study to which these phenomena can happen: social-ecological systems.
+Social-ecological systems (SES) are human and natural coupled systems where people interact with biophysical components; they often exhibit nonlinear dynamics, feedbacks, time lags, heterogeneity and resilience [@liu2007a].
+Resilience is the ability of a system to withstand disturbances without losing its function, structure and identity [@folke2016; @holling1973resilience].
+The resilience scholars have adopted two important evolutionary features: resilience is also the capacity to adapt and transform.
+Adaptability is the capacity to learn, combine experience and knowledge to adjust responses, while transformability is the ability to cross thresholds and move the SES into new basins of attraction, into emergent and often unknown development trajectories [@folke2016].
 
-### Regime shifts
+Historically, the conceptualization of resilience has its roots in mathematics.
+Holling in his seminal work introducing the concept of resilience [@holling1973resilience] uses bifurcation theory (or catastrophe theory) to suggest minimal cartoons on how ecosystems can change, how they can lose stability and shifts from one configuration to another.
+His work would have not been possible without previous developments on bifurcations (e.g. [@Poincare:1885ji; @thom1972stabilité] ).
+Several concepts such as the basin of attraction (or attractor), tipping points, thresholds, or stability landscapes have precise definitions within these theories; but sometimes used as metaphors in later conceptualizations.
+A basin of attraction, for example, is the region of parameter space that renders the same macroscopic qualitative behavior, it can be an equilibrium point, but also some more complex behaviour such as (a)periodic cycles, long transients, or chaos [@strogatz1994nonlinear].
+We will not present formal definitions of these concepts, but instead direct the interested reader to introductory books on the matter [@strogatz1994nonlinear; @sole2011phase; @kuznetsov2023].
 
-### Transformations
+In the mathematical context, resilience is the size of the basin of attraction [@holling1973resilience; @ives1995; @Clark1975; @krakovská2023].
+Features such as the distance to the boundary, the deepness or slope are often proposed as proxies of resilience [@Clark1975; @Mitra:2015jb; @Menck:2013jq] and enable the development of early warning systems for the proximity to tipping points [@scheffer2009].
+Bifurcation theory, and thus notions of resilience, have been successfully applied to fields other than sustainability science and ecology, including but not limited to language, climate systems, the states of matter, cancer dynamics, finance, social dynamics such as poverty traps, believe spreading, voting behavior, segregation, the states of mind, or music, no name a few [@sole2011phase; @scheffer2009critical].
+Some of these applications preceded the work of Holling in ecology [@holling1973resilience], and outlines the success of bifurcation theory across the sciences.
+However, evolutionary dynamics of adaptations and transformations are not well defined within the seminal work on bifurcations.
+While some formalizations have been used to explore for example the evolution of innovations [@kauffman1987; @kauffman2000; @sole2011phase], it remains an open problem to theorize and true generative models that produce agents with behaviors that were not previously coded by the programmer [@kauffman2023].
+This problem is common ground to both regime shifts and transformations research.
 
-### Similarities
+## Regime shifts
 
-### Differences
+Regime shifts are large, abrupt and persistent changes in the structure and function of social-ecological systems [@folke2004; @biggs2018].
+They occur when resilience is eroded and the SES can easily depart from its original configuration and explore different regimes or modes of behavior.
+Examples of regime shifts includes the transition from corals to algae dominated reefs [@hughes2017], eutrophication of lakes [@carpenter2020], the shift from forest to savannahs [@hirota2011; @staver2011], the dissapearance of Arctic Sea Ice [@livina2013], the collapse of the thermohaline circulation [@stocker1997; @stommel1961], or the collapse of cooperation [@rand2014; @nowak2006].
+Regime shifts are important because they often affect the flow of ecosystem services or nature contributions to people [@carpenter2009], and they present a difficult management problem since they can be hard to predict [@biggs2009; @hastings2010] and sometimes impossible to reverse on time scales relevant for management and policy [@biggs2009; @biggs2018].
 
-## Research challenges
+Regime shifts are typically characterized by their feedbacks, tipping points, thresholds, and hysteresis.
+Feedbacks are mutually interacting processes that can act to amplify or damp its response to a force [@roe2009].
+For example, the moisture recycling feedback is responsible for the maintenance of tropical rain forest like the Amazon, the more forest area there are, the more humidity is transpired, which in turn feeds the clouds in the atmosphere that rains back to support the water demands of the forest [@zemp2017].
+In drylands, facilitation feedbacks through shading, soil moisture and nutrient retention are responsible for shifts between grasslands, shrublands and deserts [@maestre2016; @berdugo2022].
+In coral reefs, herbivory plays a fundamental role in mediating the shift between corals and macro-algae [@hughes2007].
+Or in social systems, poverty traps are feedbacks mediated by income, education, or disease that keeps people in poverty despite development efforts [@bowles2016poverty; @banerjee2012poor].
+Balancing feedbacks are responsible for the stabilization of a particular regime, while reinforcing feedbacks are responsible for out of equilibrium dynamics [@biggs2018].
+Thus weakening or strenghtening of feedbacks can trigger nonlinear transitions.
 
-## Conclusions: future research
+Tipping points are critical parameter values at which a system change its long term qualitative behavior.
+They are bifurcation points or sigularities [@strogatz1994nonlinear; @thom1972stabilité].
+Speaking of a point implies the assumption of a one-dimensional system with one co-dimension, that is a very simplified version of reality where there is only one state variable that we care about (e.g. one species) and one driver affecting it (e.g. temperature).
+In reality, social-ecological system are complex adaptive systems composed by multiple interacting entities (e.g. species, businesses, cities) that are driven by multiple interacting forces that are not necessarily reducible to one (co)dimension [@levin1999fragile; @rocha2015].
+When thinking of tipping phenomena in real life contexts, one should think on tipping lines or an hypersurface, that is all the combination of critical parameters of all potential drivers and state variables, rather than points.
+Tipping points and thresholds are often used interchangeably.
+However, in mathematics they have a slightly different meaning, the threshold is the separatrix between two basins of attraction [@strogatz1994nonlinear].
+
+Observing and measuring tipping points or thresholds in real life context is very difficult, and for that reason sometimes deemed not useful beyond theoretical work [@hillebrand2020; @kopp2024].
+However, scientists have been able to identify some tipping points with different degrees of certainty.
+For example, hypoxia and anoxia are regime shifts common in coastal areas where dissolved oxygen fall under levels that are not tolerable for different groups of organisms.
+Levels below $2mlO_{2}/L$ gives rise to hypoxia a condition where many fish die-off, and below $0.5mlO_{2}/L$ to annoxia a condition that is toxic for humans [@diaz2008; @breitburg2018].
+Tipping points in precipitation have been proposed for the transitions from forest to savanna ($1500mm$), savanna to forest ($2000mm$), and savanna to deserts ($<500mm$) [@hirota2011], which have been confirmed in observational studies [@staver2011; @aleman2020; @verbesselt2016].
+Similarly, global thresholds for aridity has been reported for dryland ecosystems (0.54, 0.7 and 0.8) [@berdugo2020], while thresholds for deforestation in rain forest have been proposed (40% for the Amazon, 25% under precautionary principle, currently at 20%) [@nobre2016; @lovejoy2018].
+Several Earth subsystems can have tipping points driven by climate change.
+A recent expert elicitation speculates that six of these subsystems are highly likely to experience tipping dynamics under $2^\circ C$ of warming, with additional four tipping under $4^\circ C$ of warming [@armstrongmckay2022].
+
+Hysteresis is the reason why some regime shifts are really hard, sometimes impossible to reverse.
+Hysteresis means that tipping point in one direction of the shift is different from the tipping point in the opposite direction.
+
+\begin{marginnote}[]
+\entry{Feedback}{Mutually interacting processes that can amplify or damp its response}
+\entry{Tipping point}{Critical parameter values at which a system change its long term qualitative behavior}
+\entry{Hysteresis}{The critical point in one direction of the shift is different from the critical point in the opposite direction}
+\end{marginnote}
+
+-   features: feedbacks, tipping points, hysteresis,
+
+-   jargon: phase transitions, critical transitions, phase shifts, bifurcations.
+
+-   adaptive management, co-management
+
+-   detection (frontiers of research?)
+
+-   limitations: evolutionary dynamics, empirical evidence, not fully social-ecological.
+
+-   misconceptions: stable states, necessity of hysteresis.
+
+## Transformations
+
+## Similarities
+
+## Differences
+
+# RESEARCH CHALLENGES
+
+# CONCLUSIONS
+
+\begin{summary}[SUMMARY POINTS]
+\begin{enumerate}
+\item Summary point 1. These should be full sentences.
+\item Summary point 2. These should be full sentences.
+\item Summary point 3. These should be full sentences.
+\item Summary point 4. These should be full sentences.
+\end{enumerate}
+\end{summary}
+
+\begin{issues}[FUTURE ISSUES]
+\begin{enumerate}
+\item Future issue 1. These should be full sentences.
+\item Future issue 2. These should be full sentences.
+\item Future issue 3. These should be full sentences.
+\item Future issue 4. These should be full sentences.
+\end{enumerate}
+\end{issues}
+
+\section*{DISCLOSURE STATEMENT}
+
+If the authors have noting to disclose, the following statement will be used: The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
+
+\section*{ACKNOWLEDGMENTS}
+
+Acknowledgements, general annotations, funding.
+
+\section*{LITERATURE CITED}
