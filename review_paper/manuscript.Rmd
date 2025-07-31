@@ -19,11 +19,6 @@ bibliography: refs.bib
 documentclass: ar-1col-S2O
 header-includes:
 - \markboth{Rocha et al.}{Regime shifts and transformations} 
-
-# abstract: | 
-#    | Current research problems in sustainability science require thinking on nonlinear changes with central questions such as how to avoid them, promote them, or predict them. Regime shifts and transformations literature addresss some of these qeustions, yet there is little cross-fertilization between these two streams of research. Here we review them, propose avenues from future reseach and how together they can be a powerful tool to achieve safe and just futures
-
-# keywords: "resilience, sustainability, transformations, adaptative capacity, regime shifts, adaptive management"
 ---
 
 ```{r setup, include=FALSE}
@@ -131,10 +126,10 @@ It is not alone, similar scholarly dynamics have been reported in sociology, eco
 A diversity of frameworks is an asset when a sustainability scientist treat them as tools to solve research problems.
 But it becomes problematic when similar ideas are re-framed over and over under different semantics, yet none of them advance from framework to scientific theory, that is a set of causal statements that produce refutable expectations.
 
-For example, the idea that social and ecological dynamics are intertwined, inseparable or entangled is at least three decades old [@berkes2000linking; @berkes2008navigating; @folke1996; @folke1991; @günther1993; @levin1999fragile], if not older [@renn2020evolution].
+For example, the idea that social and ecological dynamics are intertwined, inseparable or entangled is at least three decades old [@berkes2000linking; @berkes2008navigating; @folke1996; @folke1991; @günther1993; @levin1999fragile; @holling2001; @gunderson2002panarchy], if not older [@renn2020evolution].
 In fact, the distinction between the natural and social does not exist in many indigenous cosmologies.
 Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012], coupled human environmental systems (CHENS) [@liu2007]] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
-More matured frameworks such as the SES have hundreds of case studies coded supporting the internal and external validity of the framework, and suggesting under which conditions an SES is likely to succeed in sustaining e.g. managing common pool resources [@ostrom2007, e.g. [Library on Governance of Social-Ecological Systems](https://seslibrary.asu.edu)].
+More matured frameworks such as the SES have hundreds of case studies coded supporting the internal and external validity of the framework, and suggesting under which conditions an SES is likely to succeed in sustaining e.g. common pool resources [@ostrom2007, e.g. [Library on Governance of Social-Ecological Systems](https://seslibrary.asu.edu)].
 Other frameworks lack such rich empirical evidence, although some efforts are on their way in e.g. modeling transformations combining case studies and relational approaches [@schlüter2025].
 
 As we will review, some of the criticisms of regime shifts and transformations are lack of comparative case studies that shed light under which conditions these frameworks have explanatory power, or under which conditions are they likely to fail.
@@ -163,7 +158,7 @@ We will not present formal definitions of these concepts, but instead direct the
 
 In the mathematical context, resilience is the size of the basin of attraction [@holling1973resilience; @ives1995; @Clark1975; @krakovská2023].
 Features such as the distance to the boundary, the deepness or slope are often proposed as proxies of resilience [@Clark1975; @Mitra:2015jb; @Menck:2013jq] and enable the development of early warning systems for the proximity to tipping points [@scheffer2009].
-Bifurcation theory, and thus notions of resilience, have been successfully applied to fields other than sustainability science and ecology, including but not limited to language, climate systems, the states of matter, cancer dynamics, finance, social dynamics such as poverty traps, believe spreading, voting behavior, segregation, the states of mind, or music, no name a few [@sole2011phase; @scheffer2009critical].
+Bifurcation theory, and thus notions of resilience, have been successfully applied to fields other than sustainability science and ecology, including but not limited to language, climate systems, the states of matter, cancer dynamics, finance, social dynamics such as poverty traps, believe spreading, voting behavior, segregation, the states of mind, or music, to name a few [@sole2011phase; @scheffer2009critical].
 Some of these applications preceded the work of Holling in ecology [@holling1973resilience], and outlines the success of bifurcation theory across the sciences.
 However, evolutionary dynamics of adaptations and transformations are not well defined within the seminal work on bifurcations.
 While some formalizations have been used to explore for example the evolution of innovations [@kauffman1987; @kauffman2000; @sole2011phase], it remains an open problem to theorize and true generative models that produce agents with behaviors that were not previously coded by the programmer [@kauffman2023].
@@ -171,39 +166,19 @@ This problem is common ground to both regime shifts and transformations research
 
 ## Regime shifts
 
-Regime shifts are large, abrupt and persistent changes in the structure and function of social-ecological systems [@folke2004; @biggs2018].
+Regime shifts are abrupt and persistent changes in the structure and function of social-ecological systems [@folke2004; @biggs2018].
 They occur when resilience is eroded and the SES can easily depart from its original configuration and explore different regimes or modes of behavior.
-Examples of regime shifts includes the transition from corals to algae dominated reefs [@hughes2017], eutrophication of lakes [@carpenter2020], the shift from forest to savannahs [@hirota2011; @staver2011], the dissapearance of Arctic Sea Ice [@livina2013], the collapse of the thermohaline circulation [@stocker1997; @stommel1961], or the collapse of cooperation [@rand2014; @nowak2006].
-Regime shifts are important because they often affect the flow of ecosystem services or nature contributions to people [@carpenter2009], and they present a difficult management problem since they can be hard to predict [@biggs2009; @hastings2010] and sometimes impossible to reverse on time scales relevant for management and policy [@biggs2009; @biggs2018].
+Examples of regime shifts includes the transition from corals to algae dominated reefs [@hughes2017], eutrophication of lakes [@carpenter2020], the shift from forest to savannahs [@hirota2011; @staver2011], the disappearance of Arctic Sea Ice [@livina2013], the collapse of the thermohaline circulation [@stocker1997; @stommel1961], or the collapse of cooperation [@rand2014; @nowak2006].
+Regime shifts are important because they often affect the flow of ecosystem services that people benefit from [@carpenter2009], and they present a difficult management problem since they can be hard to predict [@biggs2009; @hastings2010] and sometimes impossible to reverse on time scales relevant for management and policy [@biggs2009; @biggs2018].
 
 Regime shifts are typically characterized by their feedbacks, tipping points, thresholds, and hysteresis.
 Feedbacks are mutually interacting processes that can act to amplify or damp its response to a force [@roe2009].
-For example, the moisture recycling feedback is responsible for the maintenance of tropical rain forest like the Amazon, the more forest area there are, the more humidity is transpired, which in turn feeds the clouds in the atmosphere that rains back to support the water demands of the forest [@zemp2017].
+For example, the moisture recycling feedback is responsible for the maintenance of tropical rain forest like the Amazon, the more forest there are, the more humidity is transpired, which in turn feeds the clouds in the atmosphere that rains back to support the water demands of the forest [@zemp2017].
 In drylands, facilitation feedbacks through shading, soil moisture and nutrient retention are responsible for shifts between grasslands, shrublands and deserts [@maestre2016; @berdugo2022].
 In coral reefs, herbivory plays a fundamental role in mediating the shift between corals and macro-algae [@hughes2007].
-Or in social systems, poverty traps are feedbacks mediated by income, education, or disease that keeps people in poverty despite development efforts [@bowles2016poverty; @banerjee2012poor].
-Balancing feedbacks are responsible for the stabilization of a particular regime, while reinforcing feedbacks are responsible for out of equilibrium dynamics [@biggs2018].
-Thus weakening or strenghtening of feedbacks can trigger nonlinear transitions.
-
-Tipping points are critical parameter values at which a system change its long term qualitative behavior.
-They are bifurcation points or sigularities [@strogatz1994nonlinear; @thom1972stabilité].
-Speaking of a point implies the assumption of a one-dimensional system with one co-dimension, that is a very simplified version of reality where there is only one state variable that we care about (e.g. one species) and one driver affecting it (e.g. temperature).
-In reality, social-ecological system are complex adaptive systems composed by multiple interacting entities (e.g. species, businesses, cities) that are driven by multiple interacting forces that are not necessarily reducible to one (co)dimension [@levin1999fragile; @rocha2015].
-When thinking of tipping phenomena in real life contexts, one should think on tipping lines or an hypersurface, that is all the combination of critical parameters of all potential drivers and state variables, rather than points.
-Tipping points and thresholds are often used interchangeably.
-However, in mathematics they have a slightly different meaning, the threshold is the separatrix between two basins of attraction [@strogatz1994nonlinear].
-
-Observing and measuring tipping points or thresholds in real life context is very difficult, and for that reason sometimes deemed not useful beyond theoretical work [@hillebrand2020; @kopp2024].
-However, scientists have been able to identify some tipping points with different degrees of certainty.
-For example, hypoxia and anoxia are regime shifts common in coastal areas where dissolved oxygen fall under levels that are not tolerable for different groups of organisms.
-Levels below $2mlO_{2}/L$ gives rise to hypoxia a condition where many fish die-off, and below $0.5mlO_{2}/L$ to annoxia a condition that is toxic for humans [@diaz2008; @breitburg2018].
-Tipping points in precipitation have been proposed for the transitions from forest to savanna ($1500mm$), savanna to forest ($2000mm$), and savanna to deserts ($<500mm$) [@hirota2011], which have been confirmed in observational studies [@staver2011; @aleman2020; @verbesselt2016].
-Similarly, global thresholds for aridity has been reported for dryland ecosystems (0.54, 0.7 and 0.8) [@berdugo2020], while thresholds for deforestation in rain forest have been proposed (40% for the Amazon, 25% under precautionary principle, currently at 20%) [@nobre2016; @lovejoy2018].
-Several Earth subsystems can have tipping points driven by climate change.
-A recent expert elicitation speculates that six of these subsystems are highly likely to experience tipping dynamics under $2^\circ C$ of warming, with additional four tipping under $4^\circ C$ of warming [@armstrongmckay2022].
-
-Hysteresis is the reason why some regime shifts are really hard, sometimes impossible to reverse.
-Hysteresis means that tipping point in one direction of the shift is different from the tipping point in the opposite direction.
+Or in social systems, poverty traps are feedbacks mediated by income, education, or disease, that keeps people in poverty despite development efforts [@bowles2016poverty; @banerjee2012poor].
+Balancing feedbacks are responsible for the stabilization of a particular regime, while reinforcing feedbacks are responsible for out of equilibrium dynamics [@biggs2018; @roe2009].
+Thus weakening or strengthening of feedbacks can trigger nonlinear transitions.
 
 \begin{marginnote}[]
 \entry{Feedback}{Mutually interacting processes that can amplify or damp its response}
@@ -211,25 +186,133 @@ Hysteresis means that tipping point in one direction of the shift is different f
 \entry{Hysteresis}{The critical point in one direction of the shift is different from the critical point in the opposite direction}
 \end{marginnote}
 
--   features: feedbacks, tipping points, hysteresis,
+Tipping points are critical parameter values at which a system change its long term qualitative behavior.
+They are bifurcation points or sigularities [@strogatz1994nonlinear; @thom1972stabilité].
+Speaking of a point implies the assumption of a one-dimensional system with one co-dimension, that is a very simplified version of reality where there is only one state variable that we care about (e.g. one species) and one driver affecting it (e.g. temperature).
+In reality, social-ecological system are complex adaptive systems composed by multiple interacting entities (e.g. species, businesses, cities) that are driven by multiple interacting forces that are not necessarily reducible to one (co)dimension [@levin1999fragile; @rocha2015].
+When thinking of tipping phenomena in real life contexts, one should think on tipping lines or an hypersurface, that is all the combination of critical parameters of all potential drivers and state variables, rather than points.
+Tipping points and thresholds are often used interchangeably.
+However, in mathematics they have a slightly different meaning, the threshold is the separatrix between two basins of attraction, while the tipping point is the critical value at which a bifurcation occurs [@strogatz1994nonlinear].
 
--   jargon: phase transitions, critical transitions, phase shifts, bifurcations.
+Observing and measuring tipping points or thresholds in real life context is very difficult, and for that reason sometimes deemed not useful beyond theoretical work [@hillebrand2020; @kopp2024].
+However, scientists have been able to identify some tipping points with different degrees of certainty.
+For example, hypoxia and anoxia are regime shifts common in coastal areas where dissolved oxygen fall under levels that are not tolerable for different groups of organisms.
+Levels below $2mlO_{2}/L$ gives rise to hypoxia a condition where many fish die-off, and below $0.5mlO_{2}/L$ to annoxia a condition that is toxic for humans [@diaz2008; @breitburg2018].
+Tipping points in precipitation have been proposed for the transitions from forest to savanna ($1500mm$), savanna to forest ($2000mm$), and savanna to deserts ($<500mm$) [@hirota2011], which have been confirmed in observational studies [@staver2011; @aleman2020; @verbesselt2016].
+Similarly, global thresholds for aridity has been reported for dryland ecosystems (0.54, 0.7 and 0.8) [@berdugo2020], while thresholds for deforestation in rain forest have been proposed (40% for the Amazon, 25% under precautionary principle, currently at 20%) [@nobre2016; @lovejoy2018].
+Several Earth subsystems (e.g. the thermohalince circulation, the Greenland ice sheet) can have tipping points driven by temperature.
+A recent expert elicitation speculates that six of these subsystems are highly likely to experience tipping dynamics under $2^\circ C$ of warming, with additional four can tip under $4^\circ C$ of warming [@armstrongmckay2022].
 
--   adaptive management, co-management
+Hysteresis is the reason why some regime shifts are really hard, sometimes impossible to reverse.
+Hysteresis means that tipping point in one direction of the shift is different from the tipping point in the opposite direction.
+Thus one has to make additional efforts to restore social-ecological systems after they have tipped.
+It is like the cure is worst than falling ill.
+Much research has been devoted to understand how to manage regime shifts, how to prevent them, or what type of interventions are necessary and sufficient for recovery.
+Instead of listing the different strategies that apply to different ecosystems and contexts, here we summarize an approach that has been successful in managing nonlinear dynamics in the face of uncertainty.
 
--   detection (frontiers of research?)
+Adaptive management was developed and advocated by early regime shift scholars to encourage monitoring and experimentation, reduce uncertainty, and inform decision making [@holling1978adaptive; @walters1986adaptive].
+The purpose of adaptive management is to proactively learn by experimentation.
+It is widely use for managing fisheries, where monitoring efforts are combined with modeling to inform maximum sustainable yields in the near future; projections that are then updated through landing statistics and independent scientific monitoring [@walters1986adaptive].
+Another example is fire management, where prescribed fires can maintain a structure of the landscape that provides memory to future disturbances and prevent synchronized fires [@peterson2002].
+Experimentation in lakes have shown that they can be recovered from eutrophication by manipulating nutrient inputs, dredging, or biomanipulation of food web [@carpenter1999; @smith2009; @scheffer1993].
 
--   limitations: evolutionary dynamics, empirical evidence, not fully social-ecological.
+### Historical developments and jargon check
 
--   misconceptions: stable states, necessity of hysteresis.
+Inspired by bifurcation theory, the regime shift literature started off with Holling's seminal paper on resilience and stability of ecosystems [@holling1973resilience].
+The key thesis was that ecosystems can have alternative equilibrium or stable states, and the probability of moving from one domain to another was related to resilience.
+An idea that was received first with criticism since most ecologist believed that after disturbance, if let alone, nature would recover towards a pre-defined climax [@lewontin1969meaning].
+Theoretical work promptly followed showing multiple stability states in communities [@sutherland1974], grazing systems [@noy-meir1975], disease dynamics [@may1977], fisheries [@jones1976], and insect outbreaks [@ludwig1978].
+Empirical work in the following decades provided evidence of regime shifts in lakes [@carpenter1999; @scheffer1993; @carpenter1985], coral reefs [@knowlton1992], kelp forests [@estes1974; @steneck2002], grasslands [@walker1981], and marine systems [@daskalov2007; @casini2009]; and lead to the first syntheses in the field [@scheffer2001; @scheffer2003; @beisner2003; @andersen2009; @folke2004; @gunderson2002panarchy].
+
+These syntheses called for a more empirical grounding of the theory.
+Even though there was some well documented case studies, it was unclear to what extend regime shifts were an exception or the rule.
+More comparative case studies, experimentation and replication were encouraged.
+It also became clear that if nonlinear changes were a possibility in social-ecological systems, then we ought to be designing management and policy strategies with that possibility in mind.
+A body of work raised to the challenge and developed both theoretical and empirical advances on how to manage regime shifts [@carpenter2009; @carpenter2001; @folke2004; @crépin2006; @crépin2012; @folke2005adaptive; @selkoe2015; @armitage2008].
+Some of their lessons were identifying feedbacks [@selkoe2015], fast and slow processes that can be intervened [@crépin2006], or windows of opportunity where managerial actions can have the most impact [@scheffer2008].
+They also encouraged the identification of key variables that can be informant of potential thresholds an integrating such information into potential managerial actions [@crépin2012; @selkoe2015].
+Active participation by communities and different stakeholders were encouraged.
+Frameworks and methods for adaptive co-management were developed so that traditional knowledge and practices can be incorporated on knowledge generation and experimentation [@armitage2008].
+These bottom-up features are still practiced and encouraged through participatory resilience assessments [@sellberg2015].
+
+The success of bifurcation theory across the sciences, arts, and humanities also meant that multiple fields adopted slightly different wording, or use the same wording to mean slightly different things.
+These idiosyncrasies can be a source of confusion and regime shifts is not the exception.
+In physics they are known as phase transitions, and physicist distinguish first-order (discontinuous or with hysteresis) versus second-order (continuous) transitions [@sole2011phase].
+Some ecologist also call them critical transitions [@scheffer2009critical], although confusingly in physics the word critical is reserved to continuous transitions (second-order), while ecologists typically use the term to refer to bifurcations where hysteresis is plausible (first-order).
+In coral reef science they are called phase shifts [@hughes2007] and are expected to last at least 5 years [@norström2009], while in oceanography they are expected to last decades and be driven by oscillaations on climate systems (e.g. the Pacific Decadal Oscillation, the North Atlantic Oscillation, or El Niño Southern Oscillation) [@collie2004].
+
+Jargon and sometimes omitting the history of these concepts have led to common misconceptions.
+For example, in ecology the assumption of alternative stable states seems to prompt people to think of equilibrium only dynamics, and not other out-of-equilibrium behavior as valid regimes.
+Both the mathematical foundations and seminal regime shift papers consider cycles or chaos, not only point equilibrium, as regimes [@strogatz1994nonlinear; @holling1973resilience; @jones1976; @noy-meir1975; @may1977].
+Another example is hysteresis.
+Some conceptualizations of regime shifts separated quasi-linear change, reversible tipping (with no hysteresis, second-order transitions), and irreversible tipping (with hysteresis, first-order) as different cartoons of how systems can behave [@andersen2009; @sole2011phase; @scheffer2001].
+While this categorization is useful from the pedagogical point of view, it is worth keeping in mind that real world systems do not conform with these categories.
+A system that in the past have only exhibited linear changes can exhibit hysteresis in the future under different conditions (e.g. a new climate); and vice versa, a system that have shown hysteresis in the past might become more smooth under new conditions.
+For example, simple models of disease spreading and (social) contagion dynamics are continuous, but adding heterogeneity in the form of groups or networks gives rise to hysteresis [@watts2005].
+Similarly, simple models of transitions in drylands and forest to savannas are discontinuous when analyzed in one dimension, but they can become smooth when the dynamics are played in space [@villamartín2015].
+Some climate scientist consider hysteresis a hallmark of tipping points [@lenton2023global].
+
+Hysteresis is a sufficient, yet not a necessary condition for the existence of regime shifts.
+As theory have shown, hysteresis can appear or disappear depending on context.
+In practice, proving the existence of hysteresis implies running the experiment to tip and recover a system, which is unethical in many real world situations.
+Models are insufficient evidence of hysteresis since they only reflect the assumptions of the modeler and the plausible behaviors given the parameter space explored.
+As we will show in the next section, hysteresis also depends on what is included or excluded in the system boundary, a subjective choice by the scientist.
+However, even when hysteresis has not been proven, continuous transitions are worth considering as regime shifts and act as if hysteresis could appear in terms of management and policy.
+Continuous transitions can also have long lasting impacts on people, specially if despite being continuous (easily reversible) they can only be reversed on a time scale that is beyond human lifespans or policy relevant time scales.
+
+### Empirical evidence and detection
+
+Evidence of regime shifts have accrued during the years thanks to multiple collective efforts.
+Most scientific papers document single case studies or a set of cases of the same regime shift type.
+This trend called for a more systematic assessment and development of comparative frameworks.
+Early synthetic efforts included the thresholds database which documented thresholds in social, ecological, and social-ecological systems (N=103) [@walker2004].
+Community efforts quickly followed with for example the global ocean oxygen network which keeps track of \~400 know cases of coastal hypoxia [@diaz2008; @breitburg2018], the global field observations of forest die-off (N=1303 plots) [@hammond2022], the woody encroachment database (N=499 places) [@ding2024], or the Chinese thresholds database (N=110 cases) [@li2023].
+To the best of our knowledge, the regime shifts database is the most complete repository of empirical evidence in the world, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
+
+\begin{textbox}[h]
+\subsection{The Regime Shifts Database}
+Developed by the Stockholm Resilience Centre, the regime shifts database aims to synthesize current scientific knowledge on regime shifts in different social-ecological systems. The purpose of the database is to facilitate comparison and inform the general public on what is known on regime shifts, their potential impacts and management actions. It focuses on regime shifts that impact ecosystem services and human wellbeing. It only includes cases where clear feedback mechanisms have been proposed, and thus posibility for hysteresis exist, or that occur on a time scale relevant for manegers and policy makers.
+
+For generic regime shifts, the database offers a wikipedia style summary of the main regimes and how the shift works, their drivers, impacts on ecosystem services and management options. It uses 75 categorical variables to enable comparison about their drivers, impacts, and key attributes such as the temporal and spatial scale of the shift, its reversibility, evidence type, confidence of the existence and mechanisms, as well as linkages to other regime shifts. The database uses causal loop diagrams to map the feedback structure of the system. A regime shift analysis provides a more technical explanation and uncertainty assessment of each feedback, driver and known tipping points. It further distinguish winners and losers of the shift and attempt to links impacts on sustainable devleopment goals.
+
+Case studies are coded simiarly but with different levels of depth depending on the information available on scientific papers. Case studies are always linked to a scientific reference and when possible a precise time stamp and place where the regime shift has occurred. The database has been useful in international assessments of the Convention of Biological Diversity (CBD), the Intergovernmental Science-Policy Platform for Biodviersity and Ecosystem Services (IPBES), and the Arctic Resilience Assessment by the Arctic Council. Learn more at \href{www.regimeshifts.org}{www.regimeshifts.org}, or the development version at \href{regimeshifts.netlify.app}{regimeshifts.netlify.app} where new scientific and communicaiton features are tested.
+\end{textbox}
+
+Despite the growing evidence in terms of case studies and scientific studies, evidence of regime shifts is still contested.
+This in part reflects a healthy dose of skepticism of the scientific endeavor and trying to figure out where the theory applies and where it does fall short.
+It also reflects the changing landscape of available evidence and scientific consensus.
+For example, when the case on West Antarctica Ice sheet collapse was reviewed for the regime shifts database (2014) the literature reviewed provided conflicting arguments about the existence and plausibility of tipping points.
+Today, a decade later, the evidence of existence is much more agreed upon and some papers suggest a potential tipping point has already been crossed [@garbe2020].
+A counter example is summer Arctic sea ice loss, hypothesized as one of the classical tipping points in climate [@livina2013].
+However, based on the lack of hysteresis on climate models some climate scientist do not consider it a tipping point anymore [@wagner2015].
+Nonetheless, if one change the boundary of the system to include species who depend on ice ecosystems, or people whose livelihoods and culture depend on ice-scapes (a social-ecological system), the shift is *de facto* irreversible as it will cause extinctions or cultural loss beyond human generations.
+Recent work has also showed that many lakes do not conform to the expectation of alternative stable states [@davidson2023].
+\<Sentence by Jan on counterpoints and preprint if available\>.
+
+Several efforts have been done in developing methods for detection and prediction of regime shifts [@scheffer2009; @andersen2009; @dakos2012; @kéfi2014; @dakos2024].
+Detection methods include multivariate ordinations combined with different break point analyses or bimodality tests [@andersen2009].
+Log-response ratios have been used in meta-analyses studying the effect of environmental drivers on species failing to find evidence of thresholds due to poor signal to noise ratio [@hillebrand2020].
+Temporal and spatial auto-correlation and variance are common early warning indicators of critical slowing down, an apparent lost of stability before complex systems undergoes regime shifts [@dakos2012; @scheffer2009; @kéfi2014].
+Other early warnings include potential analysis, skewness, kurtosis, Fisher information, fractal dimension (Hurst exponents), patch size distributions, among others [@dakos2024].
+On the research challenges section we review current applications of these methods and their success in predicting regime shifts.
 
 ## Transformations
 
-## Similarities
-
-## Differences
+## Similarities and differences
 
 # RESEARCH CHALLENGES
+
+### Regime shifts
+
+-   detection (frontiers of research?): interconnected, prediction, codims EWS
+
+-   shocks [lan]
+
+-   limitations: evolutionary dynamics, empirical evidence, not fully social-ecological.
+
+### Transformations
+
+### A true integrative approach
 
 # CONCLUSIONS
 
@@ -241,7 +324,6 @@ Hysteresis means that tipping point in one direction of the shift is different f
 \item Summary point 4. These should be full sentences.
 \end{enumerate}
 \end{summary}
-
 \begin{issues}[FUTURE ISSUES]
 \begin{enumerate}
 \item Future issue 1. These should be full sentences.
@@ -251,12 +333,12 @@ Hysteresis means that tipping point in one direction of the shift is different f
 \end{enumerate}
 \end{issues}
 
-\section*{DISCLOSURE STATEMENT}
+\section\*{DISCLOSURE STATEMENT}
 
-If the authors have noting to disclose, the following statement will be used: The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
+The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
 
-\section*{ACKNOWLEDGMENTS}
+\section\*{ACKNOWLEDGMENTS}
 
 Acknowledgements, general annotations, funding.
 
-\section*{LITERATURE CITED}
+\section\*{LITERATURE CITED}
