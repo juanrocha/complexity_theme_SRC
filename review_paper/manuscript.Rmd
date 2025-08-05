@@ -128,7 +128,7 @@ But it becomes problematic when similar ideas are re-framed over and over under 
 
 For example, the idea that social and ecological dynamics are intertwined, inseparable or entangled is at least three decades old [@berkes2000linking; @berkes2008navigating; @folke1996; @folke1991; @günther1993; @levin1999fragile; @holling2001; @gunderson2002panarchy], if not older [@renn2020evolution].
 In fact, the distinction between the natural and social does not exist in many indigenous cosmologies.
-Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012], coupled human environmental systems (CHENS) [@liu2007]] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
+Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012; @mcphearson2021], coupled human environmental systems (CHENS) [@liu2007]] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
 More matured frameworks such as the SES have hundreds of case studies coded supporting the internal and external validity of the framework, and suggesting under which conditions an SES is likely to succeed in sustaining e.g. common pool resources [@ostrom2007, e.g. [Library on Governance of Social-Ecological Systems](https://seslibrary.asu.edu)].
 Other frameworks lack such rich empirical evidence, although some efforts are on their way in e.g. modeling transformations combining case studies and relational approaches [@schlüter2025].
 
@@ -170,6 +170,8 @@ Regime shifts are abrupt and persistent changes in the structure and function of
 They occur when resilience is eroded and the SES can easily depart from its original configuration and explore different regimes or modes of behavior.
 Examples of regime shifts includes the transition from corals to algae dominated reefs [@hughes2017], eutrophication of lakes [@carpenter2020], the shift from forest to savannahs [@hirota2011; @staver2011], the disappearance of Arctic Sea Ice [@livina2013], the collapse of the thermohaline circulation [@stocker1997; @stommel1961], or the collapse of cooperation [@rand2014; @nowak2006].
 Regime shifts are important because they often affect the flow of ecosystem services that people benefit from [@carpenter2009], and they present a difficult management problem since they can be hard to predict [@biggs2009; @hastings2010] and sometimes impossible to reverse on time scales relevant for management and policy [@biggs2009; @biggs2018].
+
+### Features
 
 Regime shifts are typically characterized by their feedbacks, tipping points, thresholds, and hysteresis.
 Feedbacks are mutually interacting processes that can act to amplify or damp its response to a force [@roe2009].
@@ -264,16 +266,16 @@ Continuous transitions can also have long lasting impacts on people, specially i
 
 Evidence of regime shifts have accrued during the years thanks to multiple collective efforts.
 Most scientific papers document single case studies or a set of cases of the same regime shift type.
-This trend called for a more systematic assessment and development of comparative frameworks.
+This trend called for a more systematic assessment and development of comparative frameworks [@biggs2018].
 Early synthetic efforts included the thresholds database which documented thresholds in social, ecological, and social-ecological systems (N=103) [@walker2004].
 Community efforts quickly followed with for example the global ocean oxygen network which keeps track of \~400 know cases of coastal hypoxia [@diaz2008; @breitburg2018], the global field observations of forest die-off (N=1303 plots) [@hammond2022], the woody encroachment database (N=499 places) [@ding2024], or the Chinese thresholds database (N=110 cases) [@li2023].
-To the best of our knowledge, the regime shifts database is the most complete repository of empirical evidence in the world, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
+To the best of our knowledge, the regime shifts database is the most comprehensive repository of empirical evidence in the world, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
 
 \begin{textbox}[h]
 \subsection{The Regime Shifts Database}
-Developed by the Stockholm Resilience Centre, the regime shifts database aims to synthesize current scientific knowledge on regime shifts in different social-ecological systems. The purpose of the database is to facilitate comparison and inform the general public on what is known on regime shifts, their potential impacts and management actions. It focuses on regime shifts that impact ecosystem services and human wellbeing. It only includes cases where clear feedback mechanisms have been proposed, and thus posibility for hysteresis exist, or that occur on a time scale relevant for manegers and policy makers.
+Developed by the Stockholm Resilience Centre, the regime shifts database aims to synthesize current scientific knowledge on regime shifts in different social-ecological systems. The purpose of the database is to facilitate comparison and inform the general public on what is known on regime shifts, their potential impacts on society and management actions. It focuses on regime shifts that impact ecosystem services and human wellbeing. It only includes cases where clear feedback mechanisms have been proposed, and thus posibility for hysteresis exist, and that occur on a time scale relevant for manegers and policy makers.
 
-For generic regime shifts, the database offers a wikipedia style summary of the main regimes and how the shift works, their drivers, impacts on ecosystem services and management options. It uses 75 categorical variables to enable comparison about their drivers, impacts, and key attributes such as the temporal and spatial scale of the shift, its reversibility, evidence type, confidence of the existence and mechanisms, as well as linkages to other regime shifts. The database uses causal loop diagrams to map the feedback structure of the system. A regime shift analysis provides a more technical explanation and uncertainty assessment of each feedback, driver and known tipping points. It further distinguish winners and losers of the shift and attempt to links impacts on sustainable devleopment goals.
+For generic regime shifts, the database offers a wikipedia style literature review of the main regimes and how the shift works, their drivers, impacts on ecosystem services and management options. It uses 75 categorical variables to enable comparison about their drivers, impacts, and key attributes such as the temporal and spatial scale of the shift, its reversibility, evidence type, confidence of the existence and mechanisms, as well as linkages to other regime shifts. The database uses causal loop diagrams to map the feedback structure of the system. A regime shift analysis provides a more technical explanation and uncertainty assessment of each feedback, driver and known tipping points. It further distinguish winners and losers of the shift and attempt to links impacts on sustainable devleopment goals.
 
 Case studies are coded simiarly but with different levels of depth depending on the information available on scientific papers. Case studies are always linked to a scientific reference and when possible a precise time stamp and place where the regime shift has occurred. The database has been useful in international assessments of the Convention of Biological Diversity (CBD), the Intergovernmental Science-Policy Platform for Biodviersity and Ecosystem Services (IPBES), and the Arctic Resilience Assessment by the Arctic Council. Learn more at \href{www.regimeshifts.org}{www.regimeshifts.org}, or the development version at \href{regimeshifts.netlify.app}{regimeshifts.netlify.app} where new scientific and communicaiton features are tested.
 \end{textbox}
@@ -298,9 +300,151 @@ On the research challenges section we review current applications of these metho
 
 ## Transformations
 
+Transformations are deliberate and fundamental restructuring of a system set of relationships that hold a system in a particular state [@olsson2024].
+Transformations involve changing relationships and feedbacks that influence the flow and distribution of power, authority and resources [@olsson2024].
+In other words, transformations change the structural constrains that maintain a particular regime by shifting norms, values and believes [@moore2014; @moore2023; @nyborg2018].
+Examples of transformations includes the French revolution, gaining of women voting rights, the end of slavery, the end of Apartheid, or the collapse of political system such as the Soviet Union [@gunderson2002panarchy; @berkes2008navigating].
+Transformations are important because they are seen as a potential avenues to achieve sustainable and just futures.
+In fact, major global assessment on biodiversity and ecosystem services (IPBES) calls for transformative change as and urgent an necessary way to avoid biodiversity loss and potential collapse of ecosystem functions [@obrien2025].
+IPBES defines transformations as fundamental system-wide shifts in views, structures and practices [@obrien2025].
+
+### Features
+
+Transformations are typically characterized by distributed agency, shift in power relationships, and co-production approaches that enhance representation, legitimacy and justice.
+At its bare bones, agency is the ability to act, having the power and resources to do something, and by doing so influencing other agents and the environment.
+Agency, however, is a contested concept with multiple interpretation across disciplines.
+In sociology, agency is the ability of humans to act independently, and it is in tension with structural features of society (e.g. norms, values, social class, religion) which can constraint agency.
+In some disciplines agency is associated to intentions, goal seeking, and free will (e.g. psychology), while in other disciplines it can be unintended, unconscious, and attributed to non-human entities (e.g. actor-network theory in Anthropology or Indigenous cosmologies), or human collectives (e.g. corporations, nations).
+In transformations research agency is distributed, meaning that no single author alone can drive transformative change [@olsson2024].
+Transformations are hence problems of collective action [@ostrom1990].
+
+Power is the capacity to bring about compulsory compliance, it involves authority and the capacity to coerce [@olson2000power].
+In the context of collective action, power structures can be illustrated on a situation where the decisions on one user or group of users A affect group B more than the decisions of group B affect group A [@olson2000power].
+Thus, power is embodied on social networks and can emerge from different social attributes such as social structures (leadership, company board), cultural attributes (elders, parenthood systems), market attributes (concentration), technology (military), or context such as being on upper stream versus downstream on a flowing resource (e.g. water use in water sheads, or fishers harvesting a migratory fish).
+In the context of collective action, power is often studied as different forms of heterogeneity that confers advantage to certain actors over others [@ostrom1990].
+Too much heterogeneity, at leas in economic terms (inequality), can decrease cooperation [@ostrom1990; @hamann2018], although it remains an open question whether actors in positions of privilege and power can steer systems towards sustainable development when it is on their best interest [@österblom2022; @folke2019].
+
+Justice is a core value to sustainability science.
+Sustainability is about fulfilling our needs without compromising the ability of others in current or future generations to do so.
+Justice is about the expectation that everyone should be treated fairly.
+Justice has been conceptualized as inter-species (with other living beings), intra-generational (within the current generation, between communities or countries), and inter-generational (with future generations) [@gupta2024].
+Recognition justice requires that power structures and norms that marginalize individuals or groups to be addressed; while epistemic justice recognizes multiple forms of knowledge, including Indigenous, local communities, and marginalized minorities, in science and decision making [@gupta2024].
+Transformation research typically uses co-production approaches to research (e.g. participatory action research) to increase legitimacy, enhance representation, prevent conflict, and promote more just futures [@olsson2024].
+
+### Historical development and jargon check
+
+Inspired by regime shifts research, transformations research started off with a series of seminal papers in early 2000s [@olsson2006shooting; @folke2005adaptive; @olsson2004social; @olsson2010building].
+Scholars used ideas of attractors and crossing thresholds to conceptualize transformations in three phases: preparing for change, navigating the transition, and building resilience of the new regime [@olsson2004social; @olsson2006shooting].
+Feedbacks were important on the original conceptualization.
+On the preparing for change phase an unmaking of feedbacks or weakening the structures that maintained the original regime was essential to enable the transition phase, while the new regime needed making, or establishing new feedbacks and structures on place that would provide stability to the desired attractor [@olsson2006shooting].
+These feedbacks reflected underlying norms, practices, values and believes that support one regime or the other [@moore2014].
+Today, however, there is more focus on describing the process rather than understanding its underlying mechanisms, the latter calls for methods and data that enable causal inference.
+
+Features such as windows of opportunity emphasized the timing of interventions, while leadership was thought as a feature of key individuals who could bridge shadow networks and help gain momentum for the new development pathways [@olsson2004social; @olsson2006shooting].
+More recent conceptualizations pay lesser attention to leadership as a feature of key individuals, and instead focuses on distributed agency of human and non-human entities [@olsson2024].
+It acknowledge that agency is distributed and hence different actors have a role to play in the different phases of the transformations, the set of key actors and their interactions change during the process [@westley2013; @westley2011; @moore2018].
+Agency in transformations can help trigger change or stabilize new regimes across scales (or nested adaptive cycles [@gunderson2002panarchy]), by institutionalizing innovation, releasing resources for innovation, or stimulating emerging innovations and partnerships [@westley2013a].
+
+Tipping points in transformation research are often seen through the lens of crises [@olsson2024; @olsson2006shooting; @benessaiah2021; @herrfahrdt-pähle2020; @brundiers2017].
+Previous research also frame them as critical junctures [@thelen1999].
+They can destabilize the original regime and accelerate feedbacks that phase it out, they can also lower the threshold or the resistance to the transition.
+On the new regime phase, crises can also help create niche for the new development pathways and accelerate feedbacks that maintain them.
+Unfortunately in non-scientific literature tipping points are sometimes confused with particular people or events [@gladwell2001tipping], a misuse of the concept that has been criticized in the social sciences [@watts2014; @watts2011everything].
+Tipping points have been used also to understand behavioral change both in the field and online social media platforms [@centola2010; @centola2018; @centola2018behavior; @centola2022change], theorize poverty traps [@bowles2016poverty; @banerjee2012poor], segregation [@schelling1971; @schelling1969models], political polarization [@vasconcelos2019; @bail2018], technology adoption [@centola2022change], inequality [Rocha2025], or the emergence and collapse of cooperation [@nowak2006; @axelrod1981], to mention a few social phenomena.
+All of these tipping phenomena can be enablers or barriers of transformational change, but transformations are never determined by an unique tipping point [@olsson2024].
+
+Attractors in transformation research are defined by what it could be [@olsson2024; @vanderleeuw2021].
+Thus, narratives, visions and imagination play a central role on how to explore plausible attractors [@galafassi2018; @sellberg2020; @moore2020; @pereira2019].
+The assumption is that if people cannot imagine it, the attractor will not come to be.
+Therefore, recent research has focused on what are these plausible futures and how narrative methods and story telling can unlock some of that imagination in particular contexts that include the oceans [@merrie2018], food systems [@sellberg2020], or governing biodiversity [@obrien2025].
+A large scale exploration of plausible futures is the Seeds of Good Anthropocene project where individuals and communities explore marginal bright spots that exist today and could scale up and become mainstream in the future [@bennett2016] (more in the next section).
+
+Before we explore some of the empirical evidence of transformations, it is worth revisiting conceptual frameworks that share common features with transformation research.
+The socio-technical transitions framework [@geels2019; @geels2023] has a stronger emphasis on innovations at multiple scales and how dynamics at different scales of aggregation can enable or restrict transformations.
+It has been applied to sustainability problems related to energy, housing, water sanitation, or food production [@geels2019].
+The three horizons framework [@sharpe2016] is a method inspired on transformations research to explore futures and practices.
+Horizon 1 (H1) is the currently dominant regime about to fade away, horizon 2 is the turbulent transition phase where innovations are created, some of them supporting H1 while others could lead to horizon 3 or the final regime of the transformation.
+The three horizons framework has been used to explore futures at the level of companies, non-governmental organizations, goverment and academic actors [@sharpe2016].
+
+Another framework to think of transformations is positive tipping points [@lenton2025; @positive2024].
+The concept has been widely used in climate sciences to mean conditions and strategies for fast decarbonization, including but not limited to, the adoption of new technologies such as electric vehicles, solar panels, the electrification of grids, or changing diets.
+The literature on positive tipping points have been criticized for over emphasizing technocratic solutions while ignoring core issues of justice and distributions that transformation research have studied for at least three decades [@pereira2024equity].
+Who defines what is positive, and positive for whom, are political questions often ignored.
+The problem is that the solutions landscape risk to reinforce unjust and colonial practices of exploitation of minorities or less empowered.
+It can lead to temporary or localized shifts (e.g. more electric cars) without fundamentally altering the underying system dynamics, values and norms that reinforced the undesired regime in first place [@milkoreit2022].
+
+### Empirical evidence
+
+There is a growing body of research documenting evidence of transformations.
+The Man and Biosphere reserve Kristianstad Vatterike in Southern Sweden was one of those iconic cases that helped early scholars conceptualize transformations.
+It was established in 2005 and through stewardship, co-management schemes, mobilization of shadow networks, and the success of conservation stories such as the eco-museum, the community demonstrated how to tackle the challenges of combining conservation and development [@hahn2006; @olsson2007; @schultz2007].
+Another successful example is the transformation of marine coastal resource governance in the coast of Chile [@gelcich2010].
+Through co-management experiments and collaborations between fishers and scientist, the governance system implemented an adaptive co-management strategy that enabled the recovery of several fish stocks that crashed in the late 1980s and early 1990s [@gelcich2010].
+In Panama, researchers have shown how indigenous practices can be sources of adaptive and transformative capacities showcasing an example of combining multiple types of knowledge systems [@apgar2015].
+In South Africa and Uruguay transformations labs have been used to address issues of food insecurity [@drimie2018; @gianelli2024; @pereira2020].
+These cases showcase the use of dialogues, participatory action research, or arts based methods to explore plausible futures and ways to get there.
+
+\<add another paragraph with classic case studies?\>
+
+Most of the scientific work however is dedicated to specific case studies, there is no systematic comparative framework that is continuously documenting transformations (sensu Olsson *et al.* [@olsson2024]) that have happened in the past.
+The Arctic Resilience Assessment [@carson2016arctic] developed a comparative framework inspired on the regime shifts database to assess resilience and transformations (N = 25), but at the time of publication only a handful of them were coded.
+One example is Húsavik (Iceland) where the community transformed their livelihoods from fishing and whaling to ecotourism.
+A follow up study used an adaptive capacity framework [@berkes2008navigating] to code features that would increase or not the possibility of transformations, finding that a strong sense of self-determination, the ability to experiment and re use previous knowledge and know how in new alternative livelihoods were key in successful transformations (N=40 cases analyzed, 7 were transformations) [@rocha2022].
+
+Transformation scholars not only study what has happened in the past, but also the initiatives that today could become the mainstream of future transformations.
+The Seeds of Good Anthropocene [@bennett2016] is a collaborative project where through participatory workshops scholars have been collecting local ideas of sustainable initiatives that already exist but that are not mainstream, but have transformative potential [@raudsepp-hearne2019; @urbanpl2018; @bachi2023].
+
+\begin{textbox}[h]
+\subsection{Seeds of Good Anthropocene}
+
+<Add a similar description to the RSDB, add stats on number of cases and how they are coded, link o key papers>
+
+Learn more at: \href{https://goodanthropocenes.net/}{https://goodanthropocenes.net/}
+
+\end{textbox}
+
 ## Similarities and differences
 
+The literature on regime shifts and transformations have a common history, common conceptual grounding.
+However, the thesis of this paper is that the two strands are diverging missing opportunities for cross-fertilization and risking re-inventing the wheel.
+
+Unfortunately, transformations research has been traditionally geared towards the social sciences while regime shifts research has felt at home at the natural ones.
+We said unfortunately because it has been an idea for almost half a century now that the barrier between the social and natural is first artificial and second counter productive to advance the necessary knowledge to achieve sustainability [@gunderson2002panarchy; @folke1991; @folke1996; @günther1993; @renn2020evolution].
+As a result, many transformation research do not take serious accounts into the dynamics of the natural world, and many regime shifts papers overlook the social dynamics responsible for the shifts.
+
+Another misconception is that transformations are positive while regime shifts are negative shifts.
+It is not that simple.
+First, the normative value of the shifts depends on the eye of the observer, what is positive for a group can be detrimental to another.
+That is why talking about "positive" tipping point can be misleading, the researcher risks making the assumption that their level of desirability is the only valid value, which can be problematic if not unethical.
+Transformation research in fact deals with that difference through the lens of backlash and the potential conflicts and violence that can arise during the process [@olsson2024].
+The regime shifts database have made an effort to identify winners and losers through their impacts on ecosystem services, however the literature falls short and it is not always possible through literature synthesis efforts [@biggs2018].
+Second, things can go in unexpected ways.
+Transformations can end up on an undesired regimes (at least for the majority).
+An example is the current democratic backsliding, by 2019 two thirds of the countries undergoing political regime transformations were becoming less democratic [@luhrmann2020defending; @maerz2023].
+Some regime shifts can bring desirable features, for example change in fire regimes and shifting from coniferous to deciduous forest in boreal areas might increase in the long term the capacity of the forest to store carbon in soils, helping us contain the consequences of climate change [@mack2021].
+
+Both regime shifts and transformations are emergent phenomena, they are dynamics under the umbrella of complex adaptive systems [@levin1999fragile].
+In both cases there are multiple interacting elements (people, species, groups) each with their own agency and constraints affecting each other and their environment.
+Both are multidimensional problems that cannot be controlled with a single master variable, or by a single actor –expect perhaps in very simple mathematical models used for pedagogical purposes.
+In both, collective action and cooperation is required to move from one regime to another.
+In both cases history matters, the plausible future pathways are in a way constrained by path dependency (e.g. hysteresis).
+The building parts of future innovations are features that already exist today, they ensemble, succeed or perish following the principles of evolution – which is neither deterministic nor teleological [@kauffman1987; @kauffman2000; @kauffman2023].
+
+Perhaps one key difference is the constructive nature of the attractor.
+While both streams of the literature use attractors (or basins of attraction) as part of their conceptualizations, the transformation literature is much more intentional in studying the current narratives and imagined futures that make up the plausible realization.
+In ecology that is the case as well, but less attention is put to the constructive nature of the attractor.
+For example in restoration or rewilding experiments, or policies to deal with invasive species, there is a constructive component on what "wild" or "invasive" means, the imagined meanings (or the meanings excluded) shape the types of policies implemented [@lidström2016].
+As we enter the Anthropocene perhaps we need to reimagine what novel regimes could exist, and how our management programs can already nudge change into more desirable and inclusive pathways.
+
 # RESEARCH CHALLENGES
+
+-   Multidimensionality
+
+-   Observality and detection
+
+-   Management and ethics
+
+-   Navigating positive tipping points
 
 ### Regime shifts
 
@@ -324,6 +468,7 @@ On the research challenges section we review current applications of these metho
 \item Summary point 4. These should be full sentences.
 \end{enumerate}
 \end{summary}
+
 \begin{issues}[FUTURE ISSUES]
 \begin{enumerate}
 \item Future issue 1. These should be full sentences.
@@ -333,12 +478,12 @@ On the research challenges section we review current applications of these metho
 \end{enumerate}
 \end{issues}
 
-\section\*{DISCLOSURE STATEMENT}
+\\section\*{DISCLOSURE STATEMENT}
 
 The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
 
-\section\*{ACKNOWLEDGMENTS}
+\\section\*{ACKNOWLEDGMENTS}
 
 Acknowledgements, general annotations, funding.
 
-\section\*{LITERATURE CITED}
+\\section\*{LITERATURE CITED}
