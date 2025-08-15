@@ -4,8 +4,8 @@ subtitle: "Advancing critical frontiers for safe and just futures"
 author: |
     | Juan C. Rocha et al.$^1$ 
     | \affil{$^1$Stockholm Resilience Centre, Stockholm University, Stockholm, Sweden 10691; email: \texttt{\href{mailto:juan.rocha@su.se}{\nolinkurl{juan.rocha@su.se}}}}
-
 output:
+  rtf_document:
   pdf_document:
     keep_tex: yes
     keep_md: yes
@@ -13,7 +13,6 @@ output:
     #template: template.tex
     includes:
       in_header: header.tex
-
 csl: /Users/juanrocha/Documents/styles/annual-reviews.csl
 bibliography: refs.bib
 documentclass: ar-1col-S2O
@@ -81,9 +80,9 @@ library(here)
 Current research problems in sustainability science require thinking on
 nonlinear changes with central questions such as how to avoid them,
 promote them, or predict them. Regime shifts and transformations
-literature addresss some of these qeustions, yet there is little
+literature address some of these questions, yet there is little
 cross-fertilization between these two streams of research. Here we
-review them, propose avenues from future reseach and how together they
+review them, propose avenues from future research and how together they
 can be a powerful tool to achieve safe and just futures
 \end{abstract}
 \begin{keywords}
@@ -99,7 +98,7 @@ resilience, sustainability, transformations, adaptative capacity, regime shifts,
 Sustainability scientists are concerned with nonlinear changes.
 Depending on the research problem, the focus could be on avoiding undesirable changes, or promoting desirable ones.
 But regardless of direction or desirability, notions of stability and resilience are common ground.
-Examples of nonlinear changes include the adoption of new technologies or regulatory frameworks for e.g. the energy transition, the banning of damaging substances for human health or the environment, such as chlorofluorocarbons (CFC) and their impacts on the ozone layer, or the collapse of fish stocks.
+Examples of nonlinear changes include the adoption of new technologies or regulatory frameworks for e.g. the energy transition, the banning of damaging substances for human health or the environment (such as chlorofluorocarbons (CFC) and their impacts on the ozone layer), or the collapse of fish stocks.
 
 There is two strands of sustainability science literature geared to deal with nonlinear changes that share a common origin [@holling1973resilience] but have been diverging in the last couple of decades: regime shifts [@folke2004] and transformations [@olsson2006shooting].
 Regime shifts are large, abrupt and persistent changes in the function and structure of social-ecological systems [@biggs2018].
@@ -128,7 +127,7 @@ But it becomes problematic when similar ideas are re-framed over and over under 
 
 For example, the idea that social and ecological dynamics are intertwined, inseparable or entangled is at least three decades old [@berkes2000linking; @berkes2008navigating; @folke1996; @folke1991; @günther1993; @levin1999fragile; @holling2001; @gunderson2002panarchy], if not older [@renn2020evolution].
 In fact, the distinction between the natural and social does not exist in many indigenous cosmologies.
-Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012; @mcphearson2021], coupled human environmental systems (CHENS) [@liu2007]] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
+Multiple frameworks have attempted to reshape the idea, from the social-ecological systems framework (SES) [@ostrom2009], socio-ecological technological systems (SETS) [@mcphearson2022; @ramaswami2012; @mcphearson2021], coupled human environmental systems (CHENS) [@liu2007] and more recently relational approaches [@mancillagarcia2024; @walsh2020], to name a few.
 More matured frameworks such as the SES have hundreds of case studies coded supporting the internal and external validity of the framework, and suggesting under which conditions an SES is likely to succeed in sustaining e.g. common pool resources [@ostrom2007, e.g. [Library on Governance of Social-Ecological Systems](https://seslibrary.asu.edu)].
 Other frameworks lack such rich empirical evidence, although some efforts are on their way in e.g. modeling transformations combining case studies and relational approaches [@schlüter2025].
 
@@ -149,6 +148,12 @@ Resilience is the ability of a system to withstand disturbances without losing i
 The resilience scholars have adopted two important evolutionary features: resilience is also the capacity to adapt and transform.
 Adaptability is the capacity to learn, combine experience and knowledge to adjust responses, while transformability is the ability to cross thresholds and move the SES into new basins of attraction, into emergent and often unknown development trajectories [@folke2016].
 
+\begin{marginnote}[]
+\entry{Resilience}{Ability to withstand disturbances without losing function, structure, and identity. It requires the ability to adapt and transform.}
+\entry{Adaptability}{Ability to learn, combine experience and knowledge to adjust responses}
+\entry{Transformability}{Ability to cross thresholds towards new basins of attraction, often unknown development trajectories}
+\end{marginnote}
+
 Historically, the conceptualization of resilience has its roots in mathematics.
 Holling in his seminal work introducing the concept of resilience [@holling1973resilience] uses bifurcation theory (or catastrophe theory) to suggest minimal cartoons on how ecosystems can change, how they can lose stability and shifts from one configuration to another.
 His work would have not been possible without previous developments on bifurcations (e.g. [@Poincare:1885ji; @thom1972stabilité] ).
@@ -161,7 +166,7 @@ Features such as the distance to the boundary, the deepness or slope are often p
 Bifurcation theory, and thus notions of resilience, have been successfully applied to fields other than sustainability science and ecology, including but not limited to language, climate systems, the states of matter, cancer dynamics, finance, social dynamics such as poverty traps, believe spreading, voting behavior, segregation, the states of mind, or music, to name a few [@sole2011phase; @scheffer2009critical].
 Some of these applications preceded the work of Holling in ecology [@holling1973resilience], and outlines the success of bifurcation theory across the sciences.
 However, evolutionary dynamics of adaptations and transformations are not well defined within the seminal work on bifurcations.
-While some formalizations have been used to explore for example the evolution of innovations [@kauffman1987; @kauffman2000; @sole2011phase], it remains an open problem to theorize and true generative models that produce agents with behaviors that were not previously coded by the programmer [@kauffman2023].
+While some formalizations have been used to explore for example the evolution of innovations [@kauffman1987; @kauffman2000; @sole2011phase], it remains an open problem to theorize true generative models that produce agents with behaviors that were not previously coded by the programmer [@kauffman2023].
 This problem is common ground to both regime shifts and transformations research.
 
 ## Regime shifts
@@ -203,25 +208,24 @@ Levels below $2mlO_{2}/L$ gives rise to hypoxia a condition where many fish die-
 Tipping points in precipitation have been proposed for the transitions from forest to savanna ($1500mm$), savanna to forest ($2000mm$), and savanna to deserts ($<500mm$) [@hirota2011], which have been confirmed in observational studies [@staver2011; @aleman2020; @verbesselt2016].
 Similarly, global thresholds for aridity has been reported for dryland ecosystems (0.54, 0.7 and 0.8) [@berdugo2020], while thresholds for deforestation in rain forest have been proposed (40% for the Amazon, 25% under precautionary principle, currently at 20%) [@nobre2016; @lovejoy2018].
 Several Earth subsystems (e.g. the thermohalince circulation, the Greenland ice sheet) can have tipping points driven by temperature.
-A recent expert elicitation speculates that six of these subsystems are highly likely to experience tipping dynamics under $2^\circ C$ of warming, with additional four can tip under $4^\circ C$ of warming [@armstrongmckay2022].
+A recent expert elicitation speculates that six of these subsystems are highly likely to experience tipping dynamics under $2^\circ C$ of warming, with additional four tippping under $4^\circ C$ of warming [@armstrongmckay2022].
 
 Hysteresis is the reason why some regime shifts are really hard, sometimes impossible to reverse.
 Hysteresis means that tipping point in one direction of the shift is different from the tipping point in the opposite direction.
 Thus one has to make additional efforts to restore social-ecological systems after they have tipped.
-It is like the cure is worst than falling ill.
 Much research has been devoted to understand how to manage regime shifts, how to prevent them, or what type of interventions are necessary and sufficient for recovery.
-Instead of listing the different strategies that apply to different ecosystems and contexts, here we summarize an approach that has been successful in managing nonlinear dynamics in the face of uncertainty.
+Instead of listing the different strategies that apply to different ecosystems and contexts (see the Regime Shifts Data Base), here we summarize an approach that has been successful in managing nonlinear dynamics in the face of uncertainty.
 
 Adaptive management was developed and advocated by early regime shift scholars to encourage monitoring and experimentation, reduce uncertainty, and inform decision making [@holling1978adaptive; @walters1986adaptive].
 The purpose of adaptive management is to proactively learn by experimentation.
 It is widely use for managing fisheries, where monitoring efforts are combined with modeling to inform maximum sustainable yields in the near future; projections that are then updated through landing statistics and independent scientific monitoring [@walters1986adaptive].
 Another example is fire management, where prescribed fires can maintain a structure of the landscape that provides memory to future disturbances and prevent synchronized fires [@peterson2002].
-Experimentation in lakes have shown that they can be recovered from eutrophication by manipulating nutrient inputs, dredging, or biomanipulation of food web [@carpenter1999; @smith2009; @scheffer1993].
+Experimentation in lakes have shown that they can be recovered from eutrophication by manipulating nutrient inputs, dredging, or biomanipulation of the food web [@carpenter1999; @smith2009; @scheffer1993].
 
 ### Historical developments and jargon check
 
 Inspired by bifurcation theory, the regime shift literature started off with Holling's seminal paper on resilience and stability of ecosystems [@holling1973resilience].
-The key thesis was that ecosystems can have alternative equilibrium or stable states, and the probability of moving from one domain to another was related to resilience.
+The key thesis was that ecosystems can have alternative equilibrium or stable states, and the probability of moving from one domain to another was related to its resilience.
 An idea that was received first with criticism since most ecologist believed that after disturbance, if let alone, nature would recover towards a pre-defined climax [@lewontin1969meaning].
 Theoretical work promptly followed showing multiple stability states in communities [@sutherland1974], grazing systems [@noy-meir1975], disease dynamics [@may1977], fisheries [@jones1976], and insect outbreaks [@ludwig1978].
 Empirical work in the following decades provided evidence of regime shifts in lakes [@carpenter1999; @scheffer1993; @carpenter1985], coral reefs [@knowlton1992], kelp forests [@estes1974; @steneck2002], grasslands [@walker1981], and marine systems [@daskalov2007; @casini2009]; and lead to the first syntheses in the field [@scheffer2001; @scheffer2003; @beisner2003; @andersen2009; @folke2004; @gunderson2002panarchy].
@@ -241,7 +245,7 @@ The success of bifurcation theory across the sciences, arts, and humanities also
 These idiosyncrasies can be a source of confusion and regime shifts is not the exception.
 In physics they are known as phase transitions, and physicist distinguish first-order (discontinuous or with hysteresis) versus second-order (continuous) transitions [@sole2011phase].
 Some ecologist also call them critical transitions [@scheffer2009critical], although confusingly in physics the word critical is reserved to continuous transitions (second-order), while ecologists typically use the term to refer to bifurcations where hysteresis is plausible (first-order).
-In coral reef science they are called phase shifts [@hughes2007] and are expected to last at least 5 years [@norström2009], while in oceanography they are expected to last decades and be driven by oscillaations on climate systems (e.g. the Pacific Decadal Oscillation, the North Atlantic Oscillation, or El Niño Southern Oscillation) [@collie2004].
+In coral reef science they are called phase shifts [@hughes2007] and are expected to last at least at least 5 years [@norström2009], while in oceanography they are expected to last decades and be driven by oscillations on climate systems (e.g. the Pacific Decadal Oscillation, the North Atlantic Oscillation, or El Niño Southern Oscillation) [@collie2004].
 
 Jargon and sometimes omitting the history of these concepts have led to common misconceptions.
 For example, in ecology the assumption of alternative stable states seems to prompt people to think of equilibrium only dynamics, and not other out-of-equilibrium behavior as valid regimes.
@@ -269,7 +273,7 @@ Most scientific papers document single case studies or a set of cases of the sam
 This trend called for a more systematic assessment and development of comparative frameworks [@biggs2018].
 Early synthetic efforts included the thresholds database which documented thresholds in social, ecological, and social-ecological systems (N=103) [@walker2004].
 Community efforts quickly followed with for example the global ocean oxygen network which keeps track of \~400 know cases of coastal hypoxia [@diaz2008; @breitburg2018], the global field observations of forest die-off (N=1303 plots) [@hammond2022], the woody encroachment database (N=499 places) [@ding2024], or the Chinese thresholds database (N=110 cases) [@li2023].
-To the best of our knowledge, the regime shifts database is the most comprehensive repository of empirical evidence in the world, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
+To the best of our knowledge, the regime shifts database is the most comprehensive repository of empirical evidence, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
 
 \begin{textbox}[h]
 \subsection{The Regime Shifts Database}
@@ -293,7 +297,7 @@ Recent work has also showed that many lakes do not conform to the expectation of
 
 Several efforts have been done in developing methods for detection and prediction of regime shifts [@scheffer2009; @andersen2009; @dakos2012; @kéfi2014; @dakos2024].
 Detection methods include multivariate ordinations combined with different break point analyses or bimodality tests [@andersen2009].
-Log-response ratios have been used in meta-analyses studying the effect of environmental drivers on species failing to find evidence of thresholds due to poor signal to noise ratio [@hillebrand2020].
+Log-response ratios have been used in meta-analyses studying the effect of environmental drivers on species, failing to find evidence of thresholds due to poor signal to noise ratio [@hillebrand2020].
 Temporal and spatial auto-correlation and variance are common early warning indicators of critical slowing down, an apparent lost of stability before complex systems undergoes regime shifts [@dakos2012; @scheffer2009; @kéfi2014].
 Other early warnings include potential analysis, skewness, kurtosis, Fisher information, fractal dimension (Hurst exponents), patch size distributions, among others [@dakos2024].
 On the research challenges section we review current applications of these methods and their success in predicting regime shifts.
@@ -330,6 +334,12 @@ Justice is about the expectation that everyone should be treated fairly.
 Justice has been conceptualized as inter-species (with other living beings), intra-generational (within the current generation, between communities or countries), and inter-generational (with future generations) [@gupta2024].
 Recognition justice requires that power structures and norms that marginalize individuals or groups to be addressed; while epistemic justice recognizes multiple forms of knowledge, including Indigenous, local communities, and marginalized minorities, in science and decision making [@gupta2024].
 Transformation research typically uses co-production approaches to research (e.g. participatory action research) to increase legitimacy, enhance representation, prevent conflict, and promote more just futures [@olsson2024].
+
+\begin{marginnote}[]
+\entry{Agency}{The ability to act, influencing other agents and the environment}
+\entry{Power}{The capacity to bring about compliance and coerce behavior}
+\entry{Justice}{The expectation that everyone, including future generations, should be treated fairly}
+\end{marginnote}
 
 ### Historical development and jargon check
 
@@ -379,20 +389,18 @@ There is a growing body of research documenting evidence of transformations.
 The Man and Biosphere reserve Kristianstad Vatterike in Southern Sweden was one of those iconic cases that helped early scholars conceptualize transformations.
 It was established in 2005 and through stewardship, co-management schemes, mobilization of shadow networks, and the success of conservation stories such as the eco-museum, the community demonstrated how to tackle the challenges of combining conservation and development [@hahn2006; @olsson2007; @schultz2007].
 Another successful example is the transformation of marine coastal resource governance in the coast of Chile [@gelcich2010].
-Through co-management experiments and collaborations between fishers and scientist, the governance system implemented an adaptive co-management strategy that enabled the recovery of several fish stocks that crashed in the late 1980s and early 1990s [@gelcich2010].
+Through co-management experiments and collaborations between fishers and scientists, the governance system implemented an adaptive co-management strategy that enabled the recovery of several fish stocks that crashed in the late 1980s and early 1990s [@gelcich2010].
 In Panama, researchers have shown how indigenous practices can be sources of adaptive and transformative capacities showcasing an example of combining multiple types of knowledge systems [@apgar2015].
 In South Africa and Uruguay transformations labs have been used to address issues of food insecurity [@drimie2018; @gianelli2024; @pereira2020].
 These cases showcase the use of dialogues, participatory action research, or arts based methods to explore plausible futures and ways to get there.
 
-\<add another paragraph with classic case studies?\>
-
 Most of the scientific work however is dedicated to specific case studies, there is no systematic comparative framework that is continuously documenting transformations (sensu Olsson *et al.* [@olsson2024]) that have happened in the past.
 The Arctic Resilience Assessment [@carson2016arctic] developed a comparative framework inspired on the regime shifts database to assess resilience and transformations (N = 25), but at the time of publication only a handful of them were coded.
 One example is Húsavik (Iceland) where the community transformed their livelihoods from fishing and whaling to ecotourism.
-A follow up study used an adaptive capacity framework [@berkes2008navigating] to code features that would increase or not the possibility of transformations, finding that a strong sense of self-determination, the ability to experiment and re use previous knowledge and know how in new alternative livelihoods were key in successful transformations (N=40 cases analyzed, 7 were transformations) [@rocha2022].
+A follow up study used an adaptive capacity framework [@berkes2008navigating] to code features that would increase or not the possibility of transformations, finding that a strong sense of self-determination, the ability to experiment and reuse previous knowledge and knowhow in new alternative livelihoods were key in successful transformations (N=40 cases analyzed, 7 were transformations) [@rocha2022].
 
 Transformation scholars not only study what has happened in the past, but also the initiatives that today could become the mainstream of future transformations.
-The Seeds of Good Anthropocene [@bennett2016] is a collaborative project where through participatory workshops scholars have been collecting local ideas of sustainable initiatives that already exist but that are not mainstream, but have transformative potential [@raudsepp-hearne2019; @urbanpl2018; @bachi2023].
+The Seeds of Good Anthropocene [@bennett2016] is a collaborative project where through participatory workshops scholars have been collecting local ideas of sustainable initiatives that already exist but that are not yet mainstream, but have transformative potential [@raudsepp-hearne2019; @urbanpl2018; @bachi2023].
 
 \begin{textbox}[h]
 \subsection{Seeds of Good Anthropocene}
@@ -438,52 +446,159 @@ As we enter the Anthropocene perhaps we need to reimagine what novel regimes cou
 
 # RESEARCH CHALLENGES
 
--   Multidimensionality
+Future research would benefit first from bridging both streams of literature.
+The imaginary division between the social and the natural is less than 300 years old and might be limiting our ability to create actionable knowledge that rise to the challenges of the Anthropocene [@renn2020evolution].
+We propose five research challenges that we believe are key frontiers of research on: observability and detection, multidimensionality, evolutionary dynamics, management and ethics navigating the space of positive tipping points.
 
--   Observality and detection
+## Observability and detection
 
--   Management and ethics
+Both regime shifts and transformation research would benefit from a stronger program dedicated to the problem of observability and detection.
+Previous work have raised the issue that the empirical evidence is scant [@beisner2003; @scheffer2003; @hillebrand2020; @rocha2022], only now with a few databases being consolidated but still on the hands of a few research initiatives.
+To the best of our knowledge there is no data repository on observed transformations, rather on potential seeds that could become one.
+Moreover, both transformations and regime shifts research are biased towards reporting true positives, that is cases where the phenomenon occurred.
+But there is little documentation of true negatives which are necessary for comparison, causal discovery or theory development (e.g. counterfactuals).
+A balanced sample of true positives and true negatives is necessary to apply qualitative or quantitative methods that compare features and help us explain what factors made a transformation possible or not, or what factors made a regime shift recoverable or not.
+Some of the methods recently used with such comparability in mind includes qualitative comparative analysis [@rocha2022], and machine learning approaches such as random forests [@rocha2022a] or deep neural networks [@bury2021].
 
--   Navigating positive tipping points
+Besides accurate observations of the past, a theory of regime shifts and transformations should be capable of crafting expectations of under which conditions a new realization could occur.
+In other words, that is the prediction problem.
+Regime shifts research have typically used early warning signals [@scheffer2009] to assess the probability or proximity to tipping points, a proxy of resilience [e.g. @verbesselt2016; @lenton2022; @smith2023; @forzieri2022; @feng2021; @rocha2022a].
+These papers have produced spatially explicit maps of resilience that are not consistent across methods or data sets, sometimes offering contradictory predictions or conclusions, and neither of them making an effort to assess errors, accuracy or uncertainty.
+Most papers rely on a single metric to draw conclusions, perhaps with the exception of Smith and Boers [@smith2023] who use the synchrony between autocorrelation and variance as proxy of quality of the signal.
+However, recent work on high dimensions show that anti correlated signals can emerge when multiple drivers or noise are involved in causing the transition [@titus2020; @dai2015].
+Another exception is Rocha [@rocha2022a] who used five different statistics and three significance tests to gain confidence and reduce uncertainty, yet he did not quantify accuracy.
 
-### Regime shifts
+Assessing the efficacy of these methods on real world data remains a scientific challenge.
+One needs a series of annotated data sets of true positives, true negatives of the occurrence of events, and time series data sampled at an adequate time scale to render useful signals.
+Recent work shows that common early warning indicators perform poorly in predicting forest die-offs events [Nielja].
+Thus a key area of future research is how to improve early warnings either by combining multiple signals, or multiple methods, for example enhancing them with machine learning approaches [@bury2021].
+One limitation of current machine learning developments is that models are trained on synthetic data, models that does not necessarily reflect the complexity of real world settings.
 
--   detection (frontiers of research?): interconnected, prediction, codims EWS
+Another open area of research is exploring how these early warning signals could help identify windows of opportunity for transformations.
+Transformation researchers are interested in identifying moments at which an intervention such a policy or a social movement can amplify its impact and move the system towards a different trajectory.
+If the current system is too resilient, such efforts would be in vain.
+Thus, early warnings signals could be used to identify windows of opportunity where the seeds can have chance to challenge the status quo.
+For that idea to work, transformation researchers will need to identify suitable observables or variables that are informative of the dynamics of the system.
+Some examples of potential variables include time series of key commoditiy prices (e.g. foods), voting participation, inequality, or democratic sliding.
 
--   shocks [lan]
+## Multidimensionality
 
--   limitations: evolutionary dynamics, empirical evidence, not fully social-ecological.
+Complex adaptive systems are typically composed by multiple elements or agents that interact at multiple temporal and spatial scales [@levin1999fragile; @gunderson2002panarchy; @holland2014signals].
+Yet most of the theory of regime shifts and transformations rely on simplifying assumptions of low dimensions and low co-dimensions (e.g. only a few driving forces, most frequently one).
+One outstanding challenge is how to navigate high dimensionality in theory and practice [@golubitsky2023dynamics].
+For example, in an ecological community there are as many dimensions as species in the food web, or in a market there is as many dimensions as products and services that are being exchanged.
+In theoretical work sometimes one can collapse a high dimensional problem into one dimension [@gao2016], but in real life settings that is not always the case.
 
-### Transformations
+One key question is for example what is the minimum number of dimensions that would still preserve the diversity and complexity of the social-ecological system?
+For example, if you were to design an agent based model that mimics a real world transformation, how many different types of agents or stakeholder groups does one need to model to still retain the essential features or the real SES being modelled?
+On the other end of the spectrum, if you were to observe the dynamics of a social-ecological systems, what is the minimum number of agent types or observables one needs to monitor to accurately gain insights on the dynamics of the full system?
+These problems of observability of complex systems are not new [@liu2013], but have not yet been explored in regime shifts and transformation research.
+For example, designing early warning signals for multivariate systems is still an open question [@dakos2014], with current approaches failing at producing timely predictions [@dekker2018].
 
-### A true integrative approach
+Regime shifts can be interconnected, the occurrence of one regime shift can impact the likelihood of another social-ecological system tipping over [@rocha2018].
+The mechanisms include domino effects when the occurrence of one regime shifts impacts the driver of another, or hidden feedbacks when two regime shifts can amply or dampen each other [@rocha2018].
+These cascading effects have not been studied in transformation research.
+An open area of research is how one transformation can enable or inhibit other transformations, or create unjust settings in far away places.
+Theoretical work have shown that coupled regime shifts leave no early warning signals [@dekker2018].
+On a high dimensional world, we need to develop early warnings that are robust and still useful in networked settings.
+We also need to develop techniques to assess potential spill over effects (e.g. injustice) of transformations on one place to another.
+
+## Evolutionary dynamics
+
+Resilience scholars have adopted two key evolutionary features: adaptability and transformability [@folke2016].
+However, the ability to observe, measure and compare such features is rather limited [@rocha2022].
+As a result, most scholarly work treat these features at the conceptual level with limited ability to test or falsify theories.
+Both regime shifts and transformation scholars would benefit from adopting a more rigorous approach to study evolution in social-ecological systems.
+For example, trait variation is essential in social-ecological feedbacks yet we know little on how trait distributions impact tipping points, or how regime shifts reshuffle trait dynamics [@dakos2019].
+Theoretical work has shown that fast evolutionary change with high trait variation can reduce the sensitivity of ecosystems to rate-induced regime shifts [@chaparro-pedraza2021], or that evolution can delay the manifestation of regime shifts [@chaparro-pedraza2020].
+These early examples show how including evolutionary process can change regime shift dynamics, their path dependency, management strategies or their time scales.
+
+Principles of economic complexity and collective learning [@hidalgo2021] can serve as an entry point to operationalize evolutionary approaches in transformations research.
+For example, if one think of transformations as shifting the livelihoods of a community, there are datasets that inform the type of skills, knowledge and knowhow needed to gain competitive advantage on a series of livelihoods (or producing commodities in a market), as well as the transition probabilities from one set of livelihoods to another (e.g. labour statistics).
+Using this approach, researchers have make inferences on the polarization of the work force [@alabdulkareem2018], the resilience to financial shocks [@moro2021], inequality [@hartmann2017], or future economic development [@hidalgo2007].
+Currently these approaches are being used to explore adaptive and transformative capacities in Arctic nations [Rocha2025].
+
+## Management
+
+Both regime shifts and transformations inherently poses the question of who wins and who loses.
+Transformation research have shown that conflicts of interest and power asymmetries between stakeholder groups can give rise to conflict, push backs and even violence [@olsson2024].
+As such, one frontier of research is how to develop capacities that help to navigate conflict and violence, e.g. peace building, conflict resolution, or methods to increase inclusivity, legitimacy, and representation to navigate social backlash dynamics [@olsson2024].
+Another key capacities are hospicing or honoring, grieving and addressing the losses of the dominant system [@olsson2024; @de2021hospicing]; or reflexivity to recognize the constraints and opportunities of existing institutions in place [@moore2018].
+How to develop and apply these capacities in real world settings are open areas of research.
+
+Interconnected regime shifts and transformations raises some additional challenges for management and the capacity to navigate such transitions [@rocha2025].
+It means that optimal strategies in one place might not be enough to trigger or avoid the transition locally.
+A governance challenge of cooperation emerge: first one needs to identify with whom does one need to cooperate to successfully manage the SES; and second, it implies a cooperation problem with potential power asymmetries [@rocha2025].
+These power asymmetries might hinder cooperation, exacerbate conflict or injustice.
+Preliminary theoretical works shows that coupled interdependent regime shifts are harder to manage that independent ones [@rocha2025].
+Identifying monitoring variables and empirically assess the coupling strength between systems are open areas of research [@rocha2018; @rocha2025].
+
+Another interesting avenue for future research is how social-ecological memory shapes the management space or the options to do something.
+Previous research have shown that the frequency of shocks such as fire determines the path dependency of future forest dynamics creating ecological memory [@peterson2002].
+Most regime shift research treat drivers as external forces to the system, but sometimes shocks results from internal dynamics or feedbacks.
+An open area of research is to study how the frequency and intensity of shock disturbances affect the management options of the system.
+For example, forest management can modulate water shocks (droughs and floods) further changing the resilience landscape of the forest [Lan2025].
+Another example is how the history of conflict and social trauma can hamper cooperation or the ability to imagine alternative (e.g. peaceful) futures.
+
+## Ethics: Navigating positive tipping points
+
+These management challenges do not come without ethical ones.
+Recently some scientists have been advocating for the concept of positive tipping points in the context of climate research and energy transitions [@lenton2025; @positive2024].
+While addressing climate change with timely action is an imperative, simplified frameworks that ignore the questions of positive for whom, or at the costs for whom, risk advocating for superficial technocratic solutions that do not address the required structural and values shifts for just and sustainable transformations [@obrien2025; @pereira2024equity; @olsson2024; @milkoreit2022].
+
+As such, another research challenge is how to navigate the transformations space (aka. positive tipping points) on an ethical way [@pereira2024equity].
+It requires keeping science honest to its purpose (knowledge production), neutral, non-partisan, inclusive, and thus trustworthy.
+If the scientific enterprise is used to advocate for quick fixes or align with interest of a few powerful actors, it risks reinforcing colonial practices and power asymmetries that marginalize minorities.
+It risks betraying the mantra of leaving no one behind.
 
 # CONCLUSIONS
 
+Sustainability scientist are concerned with nonlinear changes.
+Regime shifts and transformation research offer useful frameworks to study nonlinearities in social-ecological systems.
+However, these branches of the scientific literature emphasize different features of social-ecological systems, and there is a risk that opportunities for cross-fertilization are missed due to academic silos.
+
+In this review we describe their common historical grounding, their similarities and differences.
+Despite multiple historical attempts to encourage a scientific approach that goes beyond the division of natural and social sciences, a truly integrative approach is still lacking.
+Regime shifts research focuses on natural dynamics often ignoring or paying lesser attention to the social dynamics responsible for regime shifts; while transformation research emphasizes social dynamics but often ignoring natural ones.
+We conclude a truly integrative approach is needed to rise to the challenges of the Anthropocene.
+We outline a research agenda with common challenges including improving the observation and detection techniques, assessing multidimensionality, rigorously operationalizing evolutionary dynamics, new management and ethic challenges.
+
+Achieving sustainable development implies enabling just transformations while staying on a safe operating space for humanity.
+It requires skills and capacities to navigate regime shifts, avoid tipping points when possible, or implement timely adaptive management for recovery understanding what actions can make a difference.
+Transformative change is likely to meet resistance, backlash and even violence.
+Integrating methods and techniques for conflict resolution, increase legitimacy and plurality of voices is likely to be a key to enable safe and just futures.
+
 \begin{summary}[SUMMARY POINTS]
 \begin{enumerate}
-\item Summary point 1. These should be full sentences.
-\item Summary point 2. These should be full sentences.
-\item Summary point 3. These should be full sentences.
-\item Summary point 4. These should be full sentences.
+\item Regime shifts and transformations research offer useful tools to study nonlinear changes in social-ecological systems. However, these branches of the literature are not working together or cross-fertilizing insights from their theoretical or methodological developments.
+\item Regime shifts research focuses on mechanisms, feedbacks, the potential of tipping points and hysteresis. Most research on regime shifts targets a natural science audience and often ignores key social dynamics maintaining regimes or driving the shifts.
+\item Transformation research focuses on power, distributed agency, capacities for conflict resolution and justice. Most research on transformations targets a social science audience and often ignores key natural dynamics responsible for crises, or the plausibility of alternative development pathways.
+\item Both regime shifts and transformations research would benefit from a stronger empirical grounding. Although some community driven databases have been developed, they are biased towards true positives. 
+\item Both regime shifts and transformations research have paid attention to power dynamics, winners and losers. However, these insights are limited to case studies and often theorized at a conceptual level. A more comparative and empirical framework is needed to better distinguish generalizations from context dependence.
+\item Tipping dynamics are featured in both regime shifts and transformations. However an overly emphasis on points or single variables might be misleading. Tipping dynamics are often the result of interactions between multiple drivers.
+\item Sustainability scientists would benefit from a truly integrative approach that goes beyond the social and natural divides.
 \end{enumerate}
 \end{summary}
-
 \begin{issues}[FUTURE ISSUES]
 \begin{enumerate}
-\item Future issue 1. These should be full sentences.
-\item Future issue 2. These should be full sentences.
-\item Future issue 3. These should be full sentences.
-\item Future issue 4. These should be full sentences.
+\item Expanding the empirical evidence of regime shifts and transformations requires better methods for observation and monitoring of events in the past, as well as predictive tools for potential future occurrences. 
+\item Assessing the accuracy and uncertainty of current early warning signals is a research priority to understand under which conditions they can be trusted or under which conditions do they fail. Accurate early warning signals might help identify windows of opportunity for unfolding transformations.
+\item Future research should further develop methods to expand the take into account multi dimensionality and multiple interacting drivers (e.g. going beyond tipping points to tipping N-dimensional surfaces). Current methods rely on simplifying assumptions that might not hold in higher dimensions, for example early warning signals fail in interconnected systems. 
+\item A more rigorous approach to evolutionary dynamics is needed in both transformations and regime shifts research. Evolutionary dynamics can shape the adjacent possible (the feasibility of the alternative attractors). Current SES research offers little empirical tools to observe it or study its change over time.
+\item Both regime shifts and transformations generate winners and losers, reshape power asymmetries and can give rise to conflict. Research practices and methods for conciliation, conflict resolution, and increase inclusivity are needed to navigate potential social backlash and increase legitimacy.
+\item A stronger focus on ethical research practices are needed to avoid developing research that can further reinforce colonial practices, discrimination of minorities, on unjust outcomes.
+\item A truly integrative approach that goes beyond disciplinary silos is needed to address research problems relevant to sustainability scientists.
 \end{enumerate}
 \end{issues}
 
-\\section\*{DISCLOSURE STATEMENT}
+\section*{DISCLOSURE STATEMENT}
 
 The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
 
-\\section\*{ACKNOWLEDGMENTS}
+\section*{ACKNOWLEDGMENTS}
 
-Acknowledgements, general annotations, funding.
+The review benefited from a series of internal workshops at the Stockholm Resilience Centre and a conference session at the Program for Environmental Change and Society (PECS) in 2024.
+We would like to acknowledge the contributions of workshops and conference session participants including XYZ.
+JCR was supported by grant 2022-04122 from VR, the Swedish Research Council.
 
-\\section\*{LITERATURE CITED}
+\section*{LITERATURE CITED}
