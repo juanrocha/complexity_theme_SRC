@@ -39,29 +39,29 @@ header-includes:
 - \linenumbers
 ---
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(here)
-
-dat <- googlesheets4::read_sheet(
-    "https://docs.google.com/spreadsheets/d/1KmEF9qwiIn--WBDQULL_Plsu5Bw4RJrksnOatGFCQgU/edit?gid=0#gid=0", 
-    sheet = 1, skip = 1, col_types = "ccccciiiiiiiiiiiiii"
-) |> janitor::clean_names()
-
-dat |> 
-    rename(affiliation = 3, author_order = 6) |> 
-    arrange(author_order, surname) |> 
-    glue::glue_data("<<name>> <<surname>>$^{<<affiliation>>}$",
-                    .open = "<<", .close = ">>") |> 
-    str_flatten_comma(last = ", and ")
-
-aff <- googlesheets4::read_sheet(
-    "https://docs.google.com/spreadsheets/d/1KmEF9qwiIn--WBDQULL_Plsu5Bw4RJrksnOatGFCQgU/edit?gid=0#gid=0", 
-    sheet = 2, skip = 0, col_types = "cc"
-) |> janitor::clean_names()
-
-glue::glue_data(aff, '    | \\tiny $^{<<code>>}$<<affiliation>>',
-                .open = "<<", .close = ">>") 
+```{r setup, include=FALSE, echo=FALSE}
+# library(tidyverse)
+# library(here)
+# 
+# dat <- googlesheets4::read_sheet(
+#     "https://docs.google.com/spreadsheets/d/1KmEF9qwiIn--WBDQULL_Plsu5Bw4RJrksnOatGFCQgU/edit?gid=0#gid=0", 
+#     sheet = 1, skip = 1, col_types = "ccccciiiiiiiiiiiiii"
+# ) |> janitor::clean_names()
+# 
+# dat |> 
+#     rename(affiliation = 3, author_order = 6) |> 
+#     arrange(author_order, surname) |> 
+#     glue::glue_data("<<name>> <<surname>>$^{<<affiliation>>}$",
+#                     .open = "<<", .close = ">>") |> 
+#     str_flatten_comma(last = ", and ")
+# 
+# aff <- googlesheets4::read_sheet(
+#     "https://docs.google.com/spreadsheets/d/1KmEF9qwiIn--WBDQULL_Plsu5Bw4RJrksnOatGFCQgU/edit?gid=0#gid=0", 
+#     sheet = 2, skip = 0, col_types = "cc"
+# ) |> janitor::clean_names()
+# 
+# glue::glue_data(aff, '    | \\tiny $^{<<code>>}$<<affiliation>>',
+#                 .open = "<<", .close = ">>") 
 
 ```
 
@@ -99,15 +99,13 @@ Coping refers to the ability to absorb or resist change to sustain current syste
 
 The apparent separation of the two streams of research motivates our review (Fig \ref{fig:fig1}, \ref{fig:cross-ref}).
 Similar reviews have already considered the overlaps and distinctions between other concepts, such as transitions and transformations [@loorbach2017].
-Both regime shifts and transformations  describe and are applied to large-scale nonlinear changes between states of social-ecological systems and both emerged from research on resilience [@holling1973resilience].
+Both regime shifts and transformations describe and are applied to large-scale nonlinear changes between states of social-ecological systems and both emerged from research on resilience [@holling1973resilience].
 However, these research communities have developed independent conceptual frameworks, methods and modes of application.
 By limited engagement with the other, there is a risk for missing opportunities and cross-fertilization between the conceptualizations, thereby reducing the possibility to successfully approach and solve some of the core problems of sustainability science, which by definition, requires understanding social and biophysical dynamics simultaneously.
 
 In particular, dimensions that are central to one framework are at risk of becoming oversimplified in the other.
 For example, agency —the capacity of actors to act upon their own choices — is central within transformations research [@olsson2006shooting; @moore2014studying; @benessaiah2021] but less prominent within regime shifts studies, with some exceptions in economics [@li2024].
-Conversely, the role of feedbacks or time scales are central in explaining regime shifts [@nyström2012; @folke2004; @rocha2018], but not always assessed in transformations research [@olsson2010building], with some exceptions [@enfors2013].
-
-This lack of dialogue has prevented the emergence of a consensus in terminology, leading to oversimplification, and separate jargon denoting similar characteristics.
+Conversely, the role of feedbacks or time scales are central in explaining regime shifts [@nyström2012; @folke2004; @rocha2018], but not always assessed in transformations research [@olsson2010building], with some exceptions [@enfors2013]. This lack of dialogue has prevented the emergence of a consensus in terminology, leading to oversimplification, and separate jargon denoting similar characteristics.
 For example, the concept of positive tipping points emphasizes desirable transformative changes such as the adoption of electric vehicles [@lenton2025; @lenton2023global], but often omits an analysis of equity or which societal groups will benefit or suffer in this transition, and such changes implies for social-ecological sustainability [@pereira2024equity; @pereira2025].
 In contrast, issues related to justice and power have been studied for three decades in transformations research [@pereira2024equity; @blythe2018] highlighting that transformations always involve shifting power relations and entail socially differentiated risks and benefits; and can have unintended consequences [@blythe2018].
 
@@ -125,10 +123,10 @@ The next section dives on the definitions and history of these concepts, trying 
 We then outline current research challenges and areas where we believe the two strands of work could benefit from working together.
 Last, we conclude with a short agenda for future research.
 
-\begin{figure*}[h!]
+\begin{figure*}[ht]
 \centering
 \includegraphics[width =1\textwidth]{fig1_ARER}
-\caption{\textbf{Regime shifts and transformation research.} The potential landscape has inspired heuristic models of regime shifts (A) and transformations (B). A cartoon of the cusp bifurcation for forest and savanna shows that the same system can show semi-linear, abrupt but reversible, and discontinuous change with hysteresis (C). The top 30 papers on regime shifts ranked by relevance are organized on a timeline for regime shifts (D) and transformations (F). There is a lack of cross-fertilization between both strands of literature, with an annual proportion of references lower than 5\% and declining since 2020 (E), Figure \ref{fig:cross-ref} dissagregates the proportion per year. The idea of potential attractors is common to both, but there are differences on how they are studied. This represent an opportunity for cross-fertilization.} 
+\caption{\textbf{Regime shifts and transformation research.} The potential landscape has inspired heuristic models of regime shifts (A) and transformations (B), while regime shifts focus on plausible states of the system, transformations focus on imagining futures (C). The top 30 papers on regime shifts ranked by relevance are organized on a timeline for regime shifts (D) and transformations (F). Figure \ref{fig:top_papers} shows their bibliometric details. There is a lack of cross-fertilization between both strands of literature, with an annual proportion of references lower than 5\% and declining since 2020 (E), Figure \ref{fig:cross-ref} dissagregates the proportion per year. The idea of potential attractors is common to both, but there are differences on how they are studied. This represent an opportunity for cross-fertilization.} 
 \label{fig:fig1}
 \end{figure*}
 
@@ -395,7 +393,7 @@ A recent analysis of African seeds showed that building support networks is esse
 Futures-thinking is featured as a method that enable thinking in potential plausible attractors [@juri2025; @pereira2018], emphasizing decolonial practices [@sánchez-garcía2025; @terry2024], and exploring the dialogue with indigenous knowledge [@jiménez-aceituno2025].
 
 \begin{textbox}[h]
-\subsection{Seeds of Good Anthropocene}
+\subsection{Seeds of Good Anthropocenes}
 
 The Seeds of Good Anthropocenes (SoGA) project is an international collaboration that seeks to broaden how people imagine the future. The seeds project is based on imagining and creating desirable, sustainable and just futures. A key part of this project is collecting and analyzing “seeds” —existing, non-mainstream real-world initiatives that people believe could grow to become part of a desirable sustainable future. These initiatives range from community-based conservation and alternative food systems to new forms of governance, technology, art, and education.
 
@@ -404,6 +402,14 @@ The project has built a global, open database of more than 500 such seeds (avail
 These scenarios aim to help people think creatively about transformation and highlight the diversity of pathways toward good Anthropocenes. SoGA’s methods have informed processes such as the IPBES Nature Futures Framework and have been applied in leadership training, education, and strategy development. The structure and design of this website benefited from the lessons of the regime shift database, in particular for managing the tradeoffs between the ease of contributing a seed, cohesion and consistency of contributions.
 
 \end{textbox}
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width =1\textwidth]{fig2_ARER}
+\caption{\textbf{Empirical evidence} Both regime shifts and transformations used concepts from bifurcation theory as inspiration. A cusp manifold (A) shows different types of transitions using forest and savanna as example, depending on parameter values on one of the drivers (co-dim1) the transition can be smooth (B), abrupt but without hysteresis (C), or discontinuous with hysteresis (a fold bifurcation in D); but along the second driver (co-dim2) the transition is continuous (a fork bifurcation in E). Over 3000 cases of regime shifts are documented on the regime shifts database (F), while over 400 cases of potential transformations are documented on the seeds of good anthropocenes project which has informed the latest IPBES assessment (G). Academic production in number of academic papers is shown for regime shifts (H) and transformations (I) confirm the geographic bias in both areas.} 
+\label{fig:fig2}
+\end{figure*}
+
 
 ## Similarities and differences
 
@@ -616,12 +622,24 @@ CS, EL, AnaC and JCR were supported by the Swedish government research council f
 \renewcommand\thetable{S\arabic{table}}
 \setcounter{table}{0}
 \setcounter{figure}{0}
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=1\textwidth]{top_papers}
+\caption{\textbf{Top 30 papers} Data was sourced from OpenAlex with 53380 papers on regime shifts and 97300 papers on sustainability transformations, accessed in September 2025. OpenAlex is an open search engine for scientific literature. Relevance is computed as the semantic similarity between the search term (e.g. "sustainability transformations") and the text in the title and abstract, weighed by the number of citations.} 
+\label{fig:top_papers}
+\end{figure*}
+
+
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=1\textwidth]{combined-figs}
-\caption{\textbf{Lack of cross-fertilization} There has been low cross-referencing between the literature of regime shifts and transformations. Top panels present the proportion of references per year from one literature to another. Data was sourced from OpenAlex with 53380 papers on regime shifts and 97300 papers on sustainability transformations, accessed in September 2025. Data used comes from OpenAlex, an open search engine for scientific literature. Relevance in OpenAlex is computed as the semantic similarity between the search term (e.g. "sustainability transformations") and the text in the title and abstract, weighed by the number of citations.} 
+\caption{\textbf{Lack of cross-fertilization} There has been low cross-referencing between the literature of regime shifts and transformations. Top panels present the proportion of references per year from one literature to another.} 
 \label{fig:cross-ref}
 \end{figure*}
+
+
+
 
 ```{r include=FALSE}
 #### Leftovers ####
