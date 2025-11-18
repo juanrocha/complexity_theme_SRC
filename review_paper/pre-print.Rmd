@@ -3,7 +3,13 @@ title: "Regime shifts and transformations in social-ecological systems: "
 subtitle: "Advancing critical frontiers for safe and just futures"
 
 author: |
-    | \small "Juan C. Rocha$^{1,2,3,§}$, Caroline Schill$^{1,2,4}$, Emilie A. L. Lindkvist$^{1}$, Reinette Biggs$^{1,5}$, Thorsten Blenckner$^{1}$, Anne-Sophie Crépin$^{1,4}$, Ingo Fetzer$^{1}$, Carl Folke$^{1,2,4}$, Amanda Jiménez-Aceituno$^{1,6}$, Nielja Knecht$^{1, 3}$, Jan J. Kuiper$^{1}$, Steven J. Lade$^{1,7}$, Carla Lanyon-Garrido$^{1,8}$, Romi Lotcheris$^{1}$, Romina Martin$^{1}$, Vanessa Masterson$^{1,9}$, Petr Matous$^{10}$, Michele-Lee Moore$^{1,11}$, Magnus Nyström$^{1}$, Per Olsson$^{1}$, Laura M. Pereira$^{1,12}$, Garry Peterson$^{1}$, André Pinto da Silva$^{1,3,13}$, Sasha Quahe$^{1}$, Maja Schlüter$^{1}$, Lan Wang-Erlandsson$^{1,2,3,13}$, and Hannah Zoller$^{1}$"
+    | \small Juan C. Rocha$^{1,2,3,§}$, Caroline Schill$^{1,2,4}$, Emilie A. L. Lindkvist$^{1}$, Reinette Biggs$^{1,5}$,
+    | \small Thorsten Blenckner$^{1}$, Anne-Sophie Crépin$^{1,4}$, Ingo Fetzer$^{1}$, Carl Folke$^{1,2,4}$, 
+    | \small Amanda Jiménez-Aceituno$^{1,6}$, Nielja Knecht$^{1, 3}$, Jan J. Kuiper$^{1}$, Steven J. Lade$^{1,7}$, 
+    | \small Carla Lanyon-Garrido$^{1,8}$, Romi Lotcheris$^{1}$, Romina Martin$^{1}$, Vanessa Masterson$^{1,9}$, 
+    | \small Petr Matous$^{10}$, Michele-Lee Moore$^{1,11}$, Magnus Nyström$^{1}$, Per Olsson$^{1}$, 
+    | \small Laura M. Pereira$^{1,12}$, Garry Peterson$^{1}$, André Pinto da Silva$^{1,3,13}$, Sasha Quahe$^{1}$, 
+    | \small Maja Schlüter$^{1}$, Lan Wang-Erlandsson$^{1,2,3,13}$, and Hannah Zoller$^{1}$
     | 
     | \tiny $^{1}$Stockholm Resilience Centre, Stockholm University, 10691 Stockholm, Sweden
     | \tiny $^{2}$Anthropocene Laboratory, The Royal Swedish Academy of Sciences, 11418 Stockholm, Sweden
@@ -17,7 +23,8 @@ author: |
     | \tiny $^{10}$School of Project Management, University of Sydney, Sydney, Australia
     | \tiny $^{11}$Dept of Geography and Centre for Global Studies, University of Victoria, BC Canada
     | \tiny $^{12}$Global Change Institute, University of the Witwatersrand, Johannesburg, South Africa
-    | \tiny $^{13}$cE3c — for Ecology, Evolution and Environmental Changes & CHANGE — Global Change and Sustainability Institute, Faculdade de Ciências, Universidade de Lisboa, Campo Grande, Lisbon, Portugal
+    | \tiny $^{13}$cE3c — for Ecology, Evolution and Environmental Changes & CHANGE — Global Change and Sustainability
+    | \tiny Institute, Faculdade de Ciências, Universidade de Lisboa, Campo Grande, Lisbon, Portugal
     | \tiny $^{14}$Potsdam Institute for Climate Impact Research, Member of the Leibnitz Association, 14473 Potsdam, Germany
     | \tiny $^{§}$juan.rocha@su.se
     
@@ -25,19 +32,26 @@ output:
   pdf_document:
     keep_tex: yes
     keep_md: yes
-    latex_engine: xelatex
-    #template: template.tex
-    includes:
-      in_header: header.tex
+    latex_engine: pdflatex
   rtf_document:
-csl: /Users/juanrocha/Documents/styles/annual-reviews.csl
+csl: /Users/juanrocha/Documents/styles/nature.csl
 bibliography: refs.bib
-documentclass: ar-1col-S2O
+documentclass: article
+geometry: margin=3cm
+urlcolor: blue
+linklink: black
 header-includes:
-- \markboth{Rocha et al.}{Regime shifts and transformations} 
+- \usepackage{dcolumn, float, fancyhdr, hanging}
+#- \markboth{Rocha et al.}{Regime shifts and transformations} 
 - \graphicspath{{figures/}}
-- \usepackage[switch]{lineno}
-- \linenumbers
+# - \usepackage[switch]{lineno}
+# - \linenumbers
+- \pagestyle{fancy}
+- \fancyhf{}
+- \rhead{Regime shifts and transformations}
+- \lhead{\textit{Rocha et al.}}
+- \chead{}
+- \cfoot{\thepage}
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
@@ -66,20 +80,15 @@ library(here)
 
 ```
 
-\section\*{Abstract}
-
 \begin{abstract}
 Current research challenges in sustainability science require us to consider nonlinear changes – shifts that do not happen gradually but can be sudden and difficult to predict. Central questions are therefore how we can prevent harmful shifts, promote desirable ones, and better anticipate both. The regime shifts and transformations literature is well-equipped to address these questions. Yet, even though both research streams stem from the same intellectual roots, they have developed along different paths, with limited exchange between the two, missing opportunities for cross-fertilisation. We here review the definitions and history of both research streams to disentangle common grounds and differences. We propose avenues for future research and highlight how stronger integration of both research streams could support the development of more powerful approaches to help us navigate toward safe and just futures.
 \end{abstract}
-\begin{keywords}
-resilience, sustainability, transformations, adaptive capacity, regime shifts, adaptive management
-\end{keywords}
 
 \maketitle
 
 \tableofcontents
 
-\section{INTRODUCTION}
+\section{Introduction}
 
 Social-ecological systems research seeks to understand how social actions influence ecological systems and, vice versa, how dynamics in ecological systems affect social systems [@berkes2000linking].
 These systems are intertwined, and their mutual interactions are key for sustained well-being of both ecosystems and people.
@@ -110,12 +119,6 @@ This lack of dialogue has prevented the emergence of a consensus in terminology,
 For example, the concept of positive tipping points emphasizes desirable transformative changes such as the adoption of electric vehicles [@lenton2025; @lenton2023global], but often omits an analysis of equity or which societal groups will benefit or suffer in this transition, and what such changes implies for social-ecological sustainability [@pereira2024equity; @pereira2025].
 In contrast, issues related to justice and power have been studied for three decades in transformations research [@pereira2024equity; @blythe2018] highlighting that transformations always involve shifting power relations and entail socially differentiated risks and benefits; and can have unintended consequences [@blythe2018].
 
-\begin{marginnote}[]
-\entry{Resilience}{Ability to withstand disturbances without losing function, structure, and identity. It requires the ability to adapt and transform.}
-\entry{Adaptability}{Ability to learn, combine experience and knowledge to adjust responses.}
-\entry{Transformability}{Ability to cross thresholds towards new basins of attraction, often unknown development trajectories.}
-\end{marginnote}
-
 The parallel development of similar conceptual frameworks, without scientific dialogue between them, risks reducing the capacity of scientists to test their validity or adequacy in explaining real world problems [@clark2020; @watts2014].
 As we will review, some of the criticisms of regime shifts and transformations are lack of comparative case studies that shed light under which conditions these frameworks have explanatory power, or under which conditions are they likely to fail.
 An additional risk of multiple untested frameworks is the use of slightly different wording to mean the same thing (e.g. positive tipping points and transformations).
@@ -124,14 +127,14 @@ The next section dives into the definitions and history of these concepts, tryin
 We then outline current research frontiers and areas where we believe the two strands of work could benefit from each other.
 Last, we conclude with a short agenda for future research.
 
-\begin{figure*}[h!]
+\begin{figure*}[!htb]
 \centering
-\includegraphics[width =1\textwidth]{fig1_ARER}
+\includegraphics[width =0.95\textwidth]{fig1_ARER}
 \caption{\textbf{Regime shifts and transformation research.} The potential landscape has inspired heuristic models of regime shifts (A) and transformations (B), while regime shifts focus on plausible states of the system, transformations focus on imagining futures (C). The top 30 papers on regime shifts ranked by relevance are organized on a timeline for regime shifts (D) and transformations (F). Figure \ref{fig:top_papers} shows their bibliometric details. There is a lack of cross-fertilization between both strands of literature, with an annual proportion of references lower than 5\% and declining since 2020 (E), Figure \ref{fig:cross-ref} dissagregates the proportion per year. The idea of potential attractors is common to both, but there are differences on how they are studied. This represent an opportunity for cross-fertilization.} 
 \label{fig:fig1}
 \end{figure*}
 
-# HISTORY AND DEFINITIONS
+# History and definitions
 
 The concept of resilience, as a fundamental characteristic of the regime shifts and transformation frameworks, has its roots in mathematics.
 In his seminal work introducing resilience, Holling [@holling1973resilience] suggests minimal models to illustrate how ecosystems can change, lose stability, and shift from one configuration to another, building on the mathematical notion of bifurcations (e.g. [@Poincare:1885ji; @thom1972stabilité] ).
@@ -167,12 +170,6 @@ Or in social systems, poverty traps are feedbacks mediated by income, education,
 In small-scale fisheries, poverty can lead to overfishing, which in turn forces fishers to use more destructive fishing methods (e.g. dynamite fishing), locking the system in a vicious cycle [@steneck2009; @cinner2009].
 While balancing feedbacks stabilize regimes, reinforcing feedbacks drive out-of-equilibrium dynamics [@biggs2018; @roe2009].
 Thus, weakening or strengthening of feedbacks can trigger nonlinear transitions.
-
-\begin{marginnote}[]
-\entry{Feedback}{Mutually interacting processes that can amplify or damp its response.}
-\entry{Tipping point}{Critical parameter values at which a system change its long-term qualitative behavior.}
-\entry{Hysteresis}{The critical point in one direction of the shift is different from the critical point in the opposite direction.}
-\end{marginnote}
 
 Tipping points are critical parameter values at which a system changes its long-term qualitative behavior.
 They represent bifurcation points or singularities [@strogatz1994nonlinear; @thom1972stabilité].
@@ -254,14 +251,14 @@ Early efforts include the thresholds database, which documents thresholds in soc
 Other notable community efforts are the global ocean oxygen network, which keeps track of \~400 know cases of coastal hypoxia [@diaz2008; @breitburg2018], the global field observations of forest die-off (N=1303 plots) [@hammond2022], the woody encroachment database (N=499 places) [@ding2024], or the Chinese thresholds database (N=110 cases) [@li2023].
 To the best of our knowledge, the Regime Shifts Database is the most comprehensive repository of empirical evidence, synthesizing over 30 different types of regime shifts using a common comparative framework, and over 3500 case studies around the world [@biggs2018].
 
-\begin{textbox}[h]
+\fbox{\begin{minipage}{0.95\textwidth}
 \subsection{The Regime Shifts Database}
 Developed by the Stockholm Resilience Centre, the regime shifts database aims to synthesize current scientific knowledge on regime shifts in different social-ecological systems. The purpose of the database is to facilitate comparison and inform the general public on what is known on regime shifts, their potential impacts on society and management actions. It focuses on regime shifts that impact ecosystem services and human wellbeing. It only includes cases where clear feedback mechanisms have been proposed, and thus possibility for hysteresis exist, and that occur on a time scale relevant for managers and policy makers.
 
 For generic regime shifts, the database offers a wikipedia style literature review of the main regimes and how the shift works, their drivers, impacts on ecosystem services and management options. It uses 75 categorical variables to enable comparison about their drivers, impacts, and key attributes such as the temporal and spatial scale of the shift, its reversibility, evidence type, confidence of the existence and mechanisms, as well as linkages to other regime shifts. The database uses causal loop diagrams to map the feedback structure of the system. A regime shift analysis provides a more technical explanation and uncertainty assessment of each feedback, driver and known tipping points. It further distinguish winners and losers of the shift and attempt to links impacts on sustainable devleopment goals.
 
 Case studies are coded simiarly but with different levels of depth depending on the information available on scientific papers. Case studies are always linked to a scientific reference and when possible a precise time stamp and place where the regime shift has occurred. The database has been useful in international assessments of the Convention of Biological Diversity (CBD), the Intergovernmental Science-Policy Platform for Biodviersity and Ecosystem Services (IPBES), and the Arctic Resilience Assessment by the Arctic Council. Learn more at \href{www.regimeshifts.org}{www.regimeshifts.org}, or the development version at \href{regimeshifts.netlify.app}{regimeshifts.netlify.app} where new scientific and communicaiton features are tested.
-\end{textbox}
+\end{minipage}}
 
 Despite the growing number of case studies and scientific studies, evidence of regime shifts is still contested.
 This reflects both a healthy skepticism about the theory’s limits and a changing evidence base and scientific consensus.
@@ -322,13 +319,7 @@ Sustainability is about fulfilling our needs without compromising the ability of
 Justice is about the expectation that everyone should be treated fairly.
 Justice has been conceptualized as inter-species (with other living beings), intra-generational (within the current generation, between communities or countries), and inter-generational (with future generations) [@gupta2024].
 Recognition justice requires power structures and norms that marginalize individuals or groups to be addressed; while epistemic justice recognizes multiple forms of knowledge, including Indigenous, local communities, and marginalized minorities, in science and decision making [@gupta2024].
-Transformation research typically uses co-production approaches to research (e.g. participatory action research) to increase legitimacy, enhance representation, prevent conflict, and promote more just futures [@olsson2024].
-
-\begin{marginnote}[]
-\entry{Agency}{The ability to act, influencing other agents and the environment}
-\entry{Power}{The capacity to bring about compliance and coerce behavior}
-\entry{Justice}{The expectation that everyone, including future generations, should be treated fairly}
-\end{marginnote}
+Transformation research typically uses co-production approaches to research (e.g. participatory action research) to increase legitimacy, enhance representation, prevent conflict, and promote more just futures [@olsson2024].Historical development and jargon check
 
 ### Historical development and jargon check
 
@@ -393,7 +384,7 @@ The Seeds of Good Anthropocene [@bennett2016] is a collaborative project where t
 A recent analysis of African seeds showed that building support networks is essential to foster transformative potential [@tuckey2023].
 Futures-thinking is featured as a method that enables thinking in potential plausible attractors [@juri2025; @pereira2018], emphasizing decolonial practices [@sánchez-garcía2025; @terry2024], and exploring the dialogue with indigenous knowledge [@jiménez-aceituno2025].
 
-\begin{textbox}[h]
+\fbox{\begin{minipage}{0.95\textwidth}
 \subsection{Seeds of Good Anthropocenes}
 
 The Seeds of Good Anthropocenes (SoGA) project is an international collaboration that seeks to broaden how people imagine the future. The seeds project is based on imagining and creating desirable, sustainable and just futures. A key part of this project is collecting and analyzing “seeds” —existing, non-mainstream real-world initiatives that people believe could grow to become part of a desirable sustainable future. These initiatives range from community-based conservation and alternative food systems to new forms of governance, technology, art, and education.
@@ -402,7 +393,7 @@ The project has built a global, open database of more than 500 such seeds (avail
 
 These scenarios aim to help people think creatively about transformation and highlight the diversity of pathways toward good Anthropocenes. SoGA’s methods have informed processes such as the IPBES Nature Futures Framework and have been applied in leadership training, education, and strategy development. The structure and design of this website benefited from the lessons of the regime shift database, in particular for managing the tradeoffs between the ease of contributing a seed, cohesion and consistency of contributions.
 
-\end{textbox}
+\end{minipage}}
 
 ## Similarities and differences
 
@@ -442,7 +433,7 @@ We believe these two approaches are complementary and stronger together.
 Quantitative analysis helps reveal patterns and tipping points in system dynamics, while qualitative inquiry captures the meanings, values, agency and contexts that shape how change unfolds.
 Together, they provide the integrated understanding needed to push the frontiers in each research field to achieve safe and just futures.\
 
-# ADVANCING RESEARCH FRONTIERS
+# Advancing research frontiers
 
 Future research would benefit first from bridging both streams of literature.
 The imaginary division between the social and the natural is less than 300 years old and might be limiting our ability to create actionable knowledge that rise to the challenges of the Anthropocene [@renn2020evolution].
@@ -458,9 +449,9 @@ Transformation and regime shift research is also biased towards reporting true p
 A balanced sample of true positives and true negatives is necessary to compare features and help us explain what factors made a transformation or regime shift possible.
 Some of the methods recently used with such comparability in mind include qualitative comparative analysis [@rocha2022; @tuckey2023], and machine learning approaches such as random forests [@rocha2022a] or deep neural networks [@bury2021].
 
-\begin{figure*}[h!]
+\begin{figure*}[!htb]
 \centering
-\includegraphics[width =1\textwidth]{fig2_ARER}
+\includegraphics[width =0.95\textwidth]{fig2_ARER}
 \caption{\textbf{Empirical evidence} Both regime shifts and transformations used concepts from bifurcation theory as inspiration. A cusp manifold (A) shows different types of transitions using forest and savanna as example, depending on parameter values on one of the drivers (co-dim1) the transition can be smooth (top left), abrupt but without hysteresis (bottom left), or discontinuous with hysteresis (bottom right); but along the second driver (co-dim2) the transition is continuous (top right). Over 3500 cases of regime shifts are documented on the regime shifts database (B), while over 400 cases of potential transformations are documented on the seeds of good anthropocenes project which has informed the latest IPBES assessment (C). Academic production in number of academic papers is shown for regime shifts (D) and transformations (E) confirm the geographic bias in both areas.} 
 \label{fig:fig2}
 \end{figure*}
@@ -556,7 +547,7 @@ As such, another research challenge relates to the question of how to navigate t
 If the scientific enterprise is used to advocate for quick fixes or to align with the interest of a few powerful actors, it risks reinforcing colonial practices and power asymmetries that marginalize minorities.
 It risks betraying the mantra of leaving no one behind as inculcated in the UN 2030 Sustainable Development agenda.
 
-# CONCLUSIONS
+# Conclusion
 
 Despite multiple historical attempts to encourage a scientific approach that goes beyond the division of natural and social sciences, a truly integrative approach is still lacking.
 We conclude that a truly integrative approach is needed to rise to the challenges of the Anthropocene.
@@ -568,39 +559,16 @@ It requires skills and capacities to navigate regime shifts, avoid undesirable t
 Transformative change is likely to meet resistance, backlash, and even violence.
 Integrating methods and techniques for conflict resolution, increasing legitimacy, plurality of voices, and collective action is likely to be key to enable safe and just futures.
 
-\begin{summary}[SUMMARY POINTS]
-\begin{enumerate}
-\item Regime shifts and transformations research offer useful tools to study nonlinear changes in social-ecological systems. However, these branches of the literature are not working together or cross-fertilizing insights from their theoretical or methodological developments.
-\item Regime shifts research focuses on mechanisms, feedbacks, the potential of tipping points and hysteresis. Most research on regime shifts targets a natural science audience and sometimes ignores key social dynamics maintaining regimes or driving the shifts.
-\item Transformation research focuses on power, distributed agency, capacities for conflict resolution and justice. Most research on transformations targets a social science audience and sometimes ignores key natural dynamics responsible for crises, or the plausibility of alternative development pathways.
-\item Both regime shifts and transformations research would benefit from a stronger empirical grounding. Although some community driven databases have been developed, they are biased towards true positives. 
-\item Both regime shifts and transformations research have paid attention to power dynamics, winners and losers. However, these insights are limited to case studies and often theorized at a conceptual level. A more comparative and empirical framework is needed to better distinguish generalizations from context dependence.
-\item Tipping dynamics are featured in both regime shifts and transformations. However an overly emphasis on points or single variables might be misleading. Tipping dynamics are often the result of interactions between multiple drivers.
-\item Sustainability scientists would benefit from a truly integrative approach that goes beyond the social and natural divides.
-\end{enumerate}
-\end{summary}
-\begin{issues}[FUTURE ISSUES]
-\begin{enumerate}
-\item Expanding the empirical evidence of regime shifts and transformations requires better methods for observation and monitoring of events in the past, as well as predictive tools for potential future occurrences. 
-\item A key priority is to assess the accuracy and limits of ealry warning signals of nonlinear change, clarify when they can be trusted, or under which conditions do they fail. Reliable signals might help identify windows of opportunity for unfolding transformations.
-\item Future research should further develop methods that take into account multi dimensionality and multiple interacting drivers (e.g. going from tipping points to tipping of N-dimensional surfaces). Current methods rely on simplifyied assumptions that might not hold in higher dimensions, for example early warning signals fail in interconnected systems. 
-\item A more rigorous approach to evolutionary dynamics is needed in both transformations and regime shifts research. Evolutionary dynamics can shape the adjacent possible (the feasibility of the alternative attractors). Current social-ecological systems research offers little empirical tools to observe evolutionary change.
-\item Both regime shifts and transformations generate winners and losers, reshape power asymmetries and can give rise to conflict. Research practices and methods for conciliation, conflict resolution, increasing inclusivity, and collective action are needed to navigate potential social backlash and increase legitimacy.
-\item A stronger focus on ethical research practices are needed to avoid developing research that can further reinforce colonial practices, discrimination of minorities, and unjust outcomes.
-\item A truly integrative approach that goes beyond disciplinary silos is needed to address research problems relevant to sustainability science.
-\end{enumerate}
-\end{issues}
-
-\section\*{DISCLOSURE STATEMENT}
+\section*{Disclosure statement}
 
 The authors are not aware of any affiliations, memberships, funding, or financial holdings that might be perceived as affecting the objectivity of this review.
 
-\section\*{AUTHORSHIP STATEMENT}
+\section*{Authorship statement}
 
 All authors contributed to the conceptualization and writing review.
 JR, EL, CS, GP, IF, AC, and M-LM contributed to methodology; JR, EL and CS contributed with project administration, JR wrote the original draft, developed software, analyzed data and created visualizations.
 
-\section\*{ACKNOWLEDGMENTS}
+\section*{Acknowledgements}
 
 The review emerged from a series of internal workshops at the Stockholm Resilience Centre and a conference session at the Program for Environmental Change and Society (PECS) in 2024.
 We would like to acknowledge the contributions of workshops and conference session participants including Beatrice Crona, Therese Lindahl, Liam Carpenter-Urquhart, and Caroline Wallington.
@@ -611,7 +579,7 @@ JK and RM were supported by the PLURALAKES project, co-funded by the Swedish Res
 SQ was supported by the European Research Council (ERC) under the European Union’s Horizon Europe research and innovation programme (grant agreement No 101097891 - TRANSMOD).
 CS, EL, AC and JCR were supported by the Swedish government research council for sustainable development (Formas), grant 2020-00454.
 
-\section\*{LITERATURE CITED}
+\section*{References}
 
 ::: {#refs}
 :::
@@ -626,13 +594,13 @@ CS, EL, AC and JCR were supported by the Swedish government research council for
 \setcounter{figure}{0}
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=1\textwidth]{top_papers}
+\includegraphics[width=0.95\textwidth]{top_papers}
 \caption{\textbf{Top 30 papers} Data was sourced from OpenAlex with 53380 papers on regime shifts and 97300 papers on sustainability transformations, accessed in September 2025. OpenAlex is an open search engine for scientific literature. Relevance is computed as the semantic similarity between the search term (e.g. "sustainability transformations") and the text in the title and abstract, weighed by the number of citations.} 
 \label{fig:top_papers}
 \end{figure*}
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=1\textwidth]{SM2_cross-citations}
+\includegraphics[width=0.95\textwidth]{SM2_cross-citations}
 \caption{\textbf{Lack of cross-fertilization} There has been low cross-referencing between the literature of regime shifts and transformations. Top panels present the proportion of references per year from one literature to another.} 
 \label{fig:cross-ref}
 \end{figure*}
